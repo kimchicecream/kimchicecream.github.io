@@ -1,23 +1,25 @@
 .nav-container {
-    margin: 20px 60px;
-    height: 80px;
-    width: calc(100vw - 120px);
+    height: 100%;
+    width: 250px;
 
-    padding: 5px 30px;
+    padding: 20px 30px;
 
     position: fixed;
     z-index: 666;
 
-    background-color: rgba(0, 0, 0, 0.331);
-    border-radius: 20px;
-    border: 1px solid rgba(127, 129, 255, 0.375);
+    background-color: rgb(226, 219, 240);
+    border-right: 2px solid rgba(127, 129, 255, 0.375);
 
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .nav-container img {
-    height: 75px;
+    width: 80px;
+    background-color: rgb(182, 175, 255);
+
+    padding: 10px;
+    border-radius: 5px;
 }

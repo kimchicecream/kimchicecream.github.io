@@ -33,6 +33,9 @@ function Homepage() {
                     His keen eye for detail and adaptive coding skills bring creativity and innovation to every project.
                 </p>
             </div>
+            <div className='tech'>
+                <h3 className='title'>Technologies</h3>
+            </div>
             <div className='projects'>
                 <h3 className='title'>Projects</h3>
                 <div className='project' id='riddym'>
@@ -79,7 +82,6 @@ function Homepage() {
                 </div>
                 <div className="project" id='dummy'></div>
             </div>
-            <div className='tech'></div>
             <div className='footer'>
                 <span id='name'>Alex Harim Go</span>
                 <span id='copyright'><i className="fa-regular fa-copyright"></i> 2024</span>

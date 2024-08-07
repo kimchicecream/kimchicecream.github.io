@@ -52,7 +52,6 @@
     position: relative;
     /* border: 1px solid red; */
     padding-bottom: 70px;
-    border-bottom: 1px solid rgba(127, 129, 255, 0.375);
 }
 
 .home-container .projects h3 {
@@ -169,7 +168,17 @@
 
 /* ------ TECH ------- */
 .home-container .tech {
-    height: 500px;
+    margin: 0 50px;
+    position: relative;
+    /* border: 1px solid red; */
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(127, 129, 255, 0.375);
+}
+
+.home-container .tech h3 {
+    color: gray;
+    font-weight: normal;
+    margin-bottom: 30px;
 }
 
 /* ------ FOOTER ------- */

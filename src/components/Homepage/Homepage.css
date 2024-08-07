@@ -1,6 +1,7 @@
 .home-container {
     margin-left: 250px;
     padding: 50px 0;
+    position: relative;
 }
 
 /* ------ HERO ------- */
@@ -48,6 +49,10 @@
 /* ------ PROJECTS ------- */
 .home-container .projects {
     margin: 0 50px;
+    position: relative;
+    /* border: 1px solid red; */
+    padding-bottom: 70px;
+    border-bottom: 1px solid rgba(127, 129, 255, 0.375);
 }
 
 .home-container .projects h3 {
@@ -57,13 +62,114 @@
 }
 
 .home-container .projects .project {
-    height: 600px;
-    border: 1px solid rgb(226, 219, 240);
     border-radius: 20px;
-    background-color: black;
-
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    position: sticky;
+    top: 40px;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Initial state */
+/*
+    border: 2px solid red; */
+}
+
+.home-container .projects #dummy {
+    height: 200px;
+    z-index: 10;
+    /* border: 2px solid red; */
+}
+
+.home-container .projects .project.visible {
+    opacity: 1; /* Fade-in state */
+}
+
+.home-container .projects .project:nth-child(2) {
+    position: sticky;
+    top: 40px;
+    z-index: 1;
+}
+
+.home-container .projects .project:nth-child(3) {
+    position: sticky;
+    top: 90px;
+    z-index: 2;
+}
+
+.home-container .projects .project:nth-child(4) {
+    position: sticky;
+    top: 140px;
+    z-index: 3;
+}
+
+.home-container .projects .project .top-bar {
+    /* background-color: rgb(64, 64, 64); */
+    background-color: rgba(194, 189, 189, 0.661);
+    height: 40px;
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 3px 24px 1px rgba(0,0,0,0.75);
+    backdrop-filter: blur(10px);
+}
+
+.home-container .projects .project .top-bar .dot-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    position: absolute;
+    left: 20px;
+}
+
+.home-container .dot-container .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.home-container .dot-container #dot-one {
+    background-color: rgb(253, 103, 103);
+}
+
+.home-container .dot-container #dot-two {
+    background-color: rgb(255, 214, 90);
+}
+
+.home-container .dot-container #dot-three {
+    background-color: rgb(100, 219, 100);
+}
+
+.home-container .search-bar {
+    width: 400px;
+    height: 25px;
+    /* background-color: rgb(42, 42, 42); */
+    background-color: rgba(151, 151, 151, 0.217);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    gap: 5px;
+
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.home-container .search-bar span {
+    /* color: rgb(145, 145, 145); */
+    color: rgb(83, 83, 83);
+}
+
+.home-container .search-bar img {
+    height: 13px;
+}
+
+/* ------ TECH ------- */
+.home-container .tech {
+    height: 500px;
 }
 
 /* ------ FOOTER ------- */

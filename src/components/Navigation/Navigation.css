@@ -60,9 +60,11 @@
 .nav-container a {
     all: unset;
     color: rgba(0, 0, 0, 0.591);
+
+    transition: 0.2s ease;
 }
 
 .nav-container a:hover {
-    color: gray;
-    cursor: pointer;
+    color: rgb(127, 129, 255);
+    cursor: default;
 }

@@ -7,7 +7,7 @@
     position: fixed;
     z-index: 666;
 
-    background-color: rgb(241, 238, 247);
+    background-color: rgb(246, 241, 255);
     border-right: 1px solid rgba(127, 129, 255, 0.375);
 
     /* backdrop-filter: blur(10px); */

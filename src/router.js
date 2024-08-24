@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from './components/Layout.js';
 import Homepage from './components/Homepage';
+import Riddym from "./components/Riddym/index.js";
 
 const router = createBrowserRouter([
     {
@@ -9,6 +10,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Homepage />
+            },
+            {
+                path: '/riddym',
+                element: <Riddym />
             }
         ]
     }

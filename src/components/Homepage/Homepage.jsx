@@ -17,7 +17,7 @@ function Homepage() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Check visibility on initial load
+        handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);

@@ -14,15 +14,15 @@ const router = createBrowserRouter([
                 element: <Homepage />
             },
             {
-                path: '/riddym',
+                path: '/projects/riddym',
                 element: <Riddym />
             },
             {
-                path: '/babbl',
+                path: '/projects/babbl',
                 element: <Babbl />
             },
             {
-                path: '/fortbnb',
+                path: '/projects/fortbnb',
                 element: <Fortbnb />
             }
         ]

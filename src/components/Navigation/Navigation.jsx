@@ -21,7 +21,7 @@ function Navigation() {
                 <a href="mailto:gohalexx@gmail.com" className='email' target="_blank">Email</a>
                 <a href="https://www.linkedin.com/in/alexhgo9/" target="_blank" className='linkedin'>LinkedIn</a>
                 <a href="https://github.com/kimchicecream" target="_blank" className='github'>Github</a>
-                <a href="../../public/Resume.pdf" target="_blank" className='resume'>Resume</a>
+                <a href="/Resume.pdf" target="_blank" className='resume'>Resume</a>
             </div>
         </div>
     )

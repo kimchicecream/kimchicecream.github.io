@@ -132,8 +132,13 @@ function Homepage() {
                     <div className='outer-shroud' id='riddym'>
                         <div className='shroud'>
                             <div className='project-title'>
-                                <h1>Riddym</h1>
-                                <h3><span>July '24</span> — Your favorite rhythm game, reimagined.</h3>
+                                <div className='title'>
+                                    <h1>Riddym</h1>
+                                    <h3><span>July '24</span> — Your favorite rhythm game, reimagined.</h3>
+                                </div>
+                            </div>
+                            <div className='arrow'>
+                                <i className="fa fa-arrow-right-long"></i>
                             </div>
                             <div className='project'>
                                 <div className='top-bar'>
@@ -154,8 +159,13 @@ function Homepage() {
                     <div className='outer-shroud' id='babbl'>
                         <div className='shroud'>
                             <div className='project-title'>
-                                <h1>Babbl</h1>
-                                <h3><span>June '24</span> — Discord clone</h3>
+                                <div className='title'>
+                                    <h1>Babbl</h1>
+                                    <h3><span>June '24</span> — Community messaging app.</h3>
+                                </div>
+                            </div>
+                            <div className='arrow'>
+                                <i className="fa fa-arrow-right-long"></i>
                             </div>
                             <div className='project'>
                                 <div className='top-bar'>
@@ -176,8 +186,13 @@ function Homepage() {
                     <div className='outer-shroud' id='fortbnb'>
                         <div className='shroud'>
                             <div className='project-title'>
-                                <h1>fortbnb</h1>
-                                <h3><span>Feb '24</span> — Airbnb clone with a twist.</h3>
+                                <div className='title'>
+                                    <h1>fortbnb</h1>
+                                    <h3><span>Feb '24</span> — Airbnb clone with Fortnite places.</h3>
+                                </div>
+                            </div>
+                            <div className='arrow'>
+                                <i className="fa fa-arrow-right-long"></i>
                             </div>
                             <div className='project'>
                                 <div className='top-bar'>

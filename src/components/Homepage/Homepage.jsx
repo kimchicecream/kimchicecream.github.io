@@ -1,29 +1,21 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Homepage.css';
 
 function Homepage() {
-    // fade-in function
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const projects = document.querySelectorAll('.project:not(:first-child)');
-    //         const threshold = 150;
-    //         projects.forEach((project) => {
-    //             const rect = project.getBoundingClientRect();
-    //             if (rect.top < window.innerHeight - threshold && rect.bottom >= threshold) {
-    //                 project.classList.add('visible');
-    //             } else {
-    //                 project.classList.remove('visible');
-    //             }
-    //         });
-    //     };
+    const navigate = useNavigate();
 
-    //     window.addEventListener('scroll', handleScroll);
-    //     handleScroll();
+    const handleRiddymClick = () => {
+        navigate('/projects/riddym');
+    }
 
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
+    const handleBabblClick = () => {
+        navigate('/projects/babbl');
+    }
+
+    const handleFortbnbClick = () => {
+        navigate('/projects/fortbnb');
+    }
 
     useEffect(() => {
         const logos = document.querySelectorAll('.tech .logos-container .tooltip img');
@@ -34,12 +26,10 @@ function Homepage() {
                 const x = e.clientX - (rect.left + rect.width / 2);
                 const y = e.clientY - (rect.top + rect.height / 2);
 
-                // Move the image towards the cursor more precisely
                 logo.style.transform = `translate(${x / 8}px, ${y / 8}px)`;
             });
 
             logo.addEventListener('mouseleave', () => {
-                // Reset the image position with a rubber band effect
                 logo.style.transform = 'translate(0, 0)';
             });
         });
@@ -64,7 +54,7 @@ function Homepage() {
             <div className='projects-container'>
                 <h3 className='title'>Projects</h3>
                 <div className='all-projects'>
-                    <div className='outer-shroud' id='riddym'>
+                    <div className='outer-shroud' id='riddym' onClick={handleRiddymClick}>
                         <div className='shroud'>
                             <div className='project-title'>
                                 <div className='title'>
@@ -91,7 +81,7 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='outer-shroud' id='babbl'>
+                    <div className='outer-shroud' id='babbl' onClick={handleBabblClick}>
                         <div className='shroud'>
                             <div className='project-title'>
                                 <div className='title'>
@@ -118,7 +108,7 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='outer-shroud' id='fortbnb'>
+                    <div className='outer-shroud' id='fortbnb' onClick={handleFortbnbClick}>
                         <div className='shroud'>
                             <div className='project-title'>
                                 <div className='title'>

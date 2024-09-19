@@ -72,7 +72,7 @@
 }
 
 .projects-container .all-projects .shroud {
-    border: 1px solid rgb(79, 79, 79);
+    border: 1px solid rgba(127, 129, 255, 0.375);
     border-radius: 14px;
     padding: 110px 100px 0px;
     background-color: rgb(23, 23, 23);
@@ -83,7 +83,7 @@
 }
 
 .projects-container .all-projects .outer-shroud:hover .shroud {
-    border: 1px solid rgba(255, 255, 255, 0.484);
+    border: 1px solid rgba(150, 152, 255, 0.652)
 }
 
 

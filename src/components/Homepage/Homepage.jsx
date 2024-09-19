@@ -112,7 +112,7 @@ function Homepage() {
                         <div className='shroud'>
                             <div className='project-title'>
                                 <div className='title'>
-                                    <h1>fortbnb</h1>
+                                    <h1>Fortbnb</h1>
                                     <h3><span>Feb '24</span> — Airbnb clone with Fortnite places.</h3>
                                 </div>
                             </div>

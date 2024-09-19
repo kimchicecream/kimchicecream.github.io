@@ -6,7 +6,7 @@ function Riddym() {
 
     const handleBack = () => {
         navigate('/');
-    }
+    };
 
     return (
         <div className='riddym-container'>
@@ -16,7 +16,7 @@ function Riddym() {
                 </div>
             </div>
             <div className='content'>
-                <h1>Under maintenance</h1>
+                <h1>Undergoing a design process...</h1>
             </div>
         </div>
     )

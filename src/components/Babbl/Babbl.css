@@ -1,0 +1,48 @@
+.babbl-container {
+    box-sizing: border-box;
+}
+
+.babbl-container .top {
+    display: flex;
+
+    padding: 50px 60px;
+
+    /* border: 2px solid red; */
+}
+
+.babbl-container .top .back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    padding: 10px 20px;
+    background-color: rgba(75, 75, 75, 0.597);
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+    min-width: fit-content;
+    position: fixed;
+    z-index: 1;
+}
+
+.babbl-container .top .back-button:hover {
+    background-color: rgba(115, 115, 115, 0.597);
+}
+
+.babbl-container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 0;
+    margin-top: 200px;
+
+    /* border: 1px solid red; */
+}
+
+.babbl-container .content h1 {
+    color: rgb(55, 55, 55);
+}

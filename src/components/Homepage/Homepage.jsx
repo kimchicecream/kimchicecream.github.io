@@ -2,27 +2,28 @@ import React, { useEffect } from 'react';
 import './Homepage.css';
 
 function Homepage() {
-    useEffect(() => {
-        const handleScroll = () => {
-            const projects = document.querySelectorAll('.project');
-            const threshold = 150; // Adjust this value to control when the fade-in starts
-            projects.forEach((project) => {
-                const rect = project.getBoundingClientRect();
-                if (rect.top < window.innerHeight - threshold && rect.bottom >= threshold) {
-                    project.classList.add('visible');
-                } else {
-                    project.classList.remove('visible');
-                }
-            });
-        };
+    // fade-in function
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const projects = document.querySelectorAll('.project:not(:first-child)');
+    //         const threshold = 150;
+    //         projects.forEach((project) => {
+    //             const rect = project.getBoundingClientRect();
+    //             if (rect.top < window.innerHeight - threshold && rect.bottom >= threshold) {
+    //                 project.classList.add('visible');
+    //             } else {
+    //                 project.classList.remove('visible');
+    //             }
+    //         });
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
+    //     window.addEventListener('scroll', handleScroll);
+    //     handleScroll();
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     useEffect(() => {
         const logos = document.querySelectorAll('.tech .logos-container .tooltip img');
@@ -125,51 +126,76 @@ function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className='projects'>
+            <div className='projects-container'>
                 <h3 className='title'>Projects</h3>
-                <div className='project' id='riddym'>
-                    <div className='top-bar'>
-                        <div className='dot-container'>
-                            <div className='dot' id='dot-one'></div>
-                            <div className='dot' id='dot-two'></div>
-                            <div className='dot' id='dot-three'></div>
-                        </div>
-                        <div className='search-bar'>
-                            <img src='/riddym/riddym-logo.png'/>
-                            <span>https://riddym.onrender.com</span>
-                        </div>
-                    </div>
-                    <img src='/riddym/riddym-sample.png' alt='riddym'/>
-                </div>
-                <div className='project' id='babbl'>
-                    <div className='top-bar'>
-                        <div className='dot-container'>
-                            <div className='dot' id='dot-one'></div>
-                            <div className='dot' id='dot-two'></div>
-                            <div className='dot' id='dot-three'></div>
-                        </div>
-                        <div className='search-bar'>
-                        <img src='/babbl/babbl-logo.png'/>
-                            <span>https://babbl.onrender.com</span>
+                <div className='all-projects'>
+                    <div className='outer-shroud' id='riddym'>
+                        <div className='shroud'>
+                            <div className='project-title'>
+                                <h1>Riddym</h1>
+                                <h3><span>July '24</span> — Your favorite rhythm game, reimagined.</h3>
+                            </div>
+                            <div className='project'>
+                                <div className='top-bar'>
+                                    <div className='dot-container'>
+                                        <div className='dot' id='dot-one'></div>
+                                        <div className='dot' id='dot-two'></div>
+                                        <div className='dot' id='dot-three'></div>
+                                    </div>
+                                    <div className='search-bar'>
+                                        <img src='/riddym/riddym-logo.png'/>
+                                        <span>https://riddym.onrender.com</span>
+                                    </div>
+                                </div>
+                                <img src='/riddym/riddym-sample.png' alt='riddym'/>
+                            </div>
                         </div>
                     </div>
-                    <img src='/babbl/babbl-sample.png' alt='riddym'/>
-                </div>
-                <div className='project' id='fortbnb'>
-                    <div className='top-bar'>
-                        <div className='dot-container'>
-                            <div className='dot' id='dot-one'></div>
-                            <div className='dot' id='dot-two'></div>
-                            <div className='dot' id='dot-three'></div>
-                        </div>
-                        <div className='search-bar'>
-                            <img src='/fortbnb/fortbnb-logo.png'/>
-                            <span>https://fortbnb.onrender.com</span>
+                    <div className='outer-shroud' id='babbl'>
+                        <div className='shroud'>
+                            <div className='project-title'>
+                                <h1>Babbl</h1>
+                                <h3><span>June '24</span> — Discord clone</h3>
+                            </div>
+                            <div className='project'>
+                                <div className='top-bar'>
+                                    <div className='dot-container'>
+                                        <div className='dot' id='dot-one'></div>
+                                        <div className='dot' id='dot-two'></div>
+                                        <div className='dot' id='dot-three'></div>
+                                    </div>
+                                    <div className='search-bar'>
+                                    <img src='/babbl/babbl-logo.png'/>
+                                        <span>https://babbl.onrender.com</span>
+                                    </div>
+                                </div>
+                                <img src='/babbl/babbl-sample.png' alt='riddym'/>
+                            </div>
                         </div>
                     </div>
-                    <img src='/fortbnb/fortbnb-homepage.png' alt='riddym'/>
+                    <div className='outer-shroud' id='fortbnb'>
+                        <div className='shroud'>
+                            <div className='project-title'>
+                                <h1>fortbnb</h1>
+                                <h3><span>Feb '24</span> — Airbnb clone with a twist.</h3>
+                            </div>
+                            <div className='project'>
+                                <div className='top-bar'>
+                                    <div className='dot-container'>
+                                        <div className='dot' id='dot-one'></div>
+                                        <div className='dot' id='dot-two'></div>
+                                        <div className='dot' id='dot-three'></div>
+                                    </div>
+                                    <div className='search-bar'>
+                                        <img src='/fortbnb/fortbnb-logo.png'/>
+                                        <span>https://fortbnb.onrender.com</span>
+                                    </div>
+                                </div>
+                                <img src='/fortbnb/fortbnb-homepage.png' alt='riddym'/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="project" id='dummy'></div>
             </div>
             <div className='footer'>
                 <span id='name'>Alex Harim Go</span>

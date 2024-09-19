@@ -1,0 +1,22 @@
+.riddym-container {
+    box-sizing: border-box;
+}
+
+.riddym-container .top {
+    display: flex;
+
+    padding: 50px 60px;
+
+    border: 2px solid red;
+}
+
+.riddym-container .top .back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px;
+    background-color: rgba(75, 75, 75, 0.597);
+    border-radius: 10px;
+}

@@ -55,11 +55,97 @@ function Homepage() {
     return (
         <div className="home-container">
             <div className='hero'>
-                <p id='welcome'>Welcome.</p>
+                <p id='welcome'>Hello!</p>
                 <p id='paragraph'>
                     Alex is a full-stack software developer specializing in dynamic applications and UI/UX design.
                     His keen eye for detail and adaptive coding skills bring creativity and innovation to every project.
                 </p>
+            </div>
+            <div className='projects-container'>
+                <h3 className='title'>Projects</h3>
+                <div className='all-projects'>
+                    <div className='outer-shroud' id='riddym'>
+                        <div className='shroud'>
+                            <div className='project-title'>
+                                <div className='title'>
+                                    <h1>Riddym</h1>
+                                    <h3><span>July '24</span> — A familiar rhythm game, reimagined.</h3>
+                                </div>
+                            </div>
+                            <div className='arrow'>
+                                <i className="fa fa-arrow-right-long"></i>
+                            </div>
+                            <div className='project'>
+                                <div className='top-bar'>
+                                    <div className='dot-container'>
+                                        <div className='dot' id='dot-one'></div>
+                                        <div className='dot' id='dot-two'></div>
+                                        <div className='dot' id='dot-three'></div>
+                                    </div>
+                                    <div className='search-bar'>
+                                        {/* <img src='/riddym/riddym-logo.png'/>
+                                        <span>https://riddym.onrender.com</span> */}
+                                    </div>
+                                </div>
+                                <img src='/riddym/riddym-sample.png' alt='riddym'/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='outer-shroud' id='babbl'>
+                        <div className='shroud'>
+                            <div className='project-title'>
+                                <div className='title'>
+                                    <h1>Babbl</h1>
+                                    <h3><span>June '24</span> — A community messaging app.</h3>
+                                </div>
+                            </div>
+                            <div className='arrow'>
+                                <i className="fa fa-arrow-right-long"></i>
+                            </div>
+                            <div className='project'>
+                                <div className='top-bar'>
+                                    <div className='dot-container'>
+                                        <div className='dot' id='dot-one'></div>
+                                        <div className='dot' id='dot-two'></div>
+                                        <div className='dot' id='dot-three'></div>
+                                    </div>
+                                    <div className='search-bar'>
+                                        {/* <img src='/babbl/babbl-logo.png'/>
+                                        <span>https://babbl.onrender.com</span> */}
+                                    </div>
+                                </div>
+                                <img src='/babbl/babbl-sample.png' alt='riddym'/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='outer-shroud' id='fortbnb'>
+                        <div className='shroud'>
+                            <div className='project-title'>
+                                <div className='title'>
+                                    <h1>fortbnb</h1>
+                                    <h3><span>Feb '24</span> — Airbnb clone with Fortnite places.</h3>
+                                </div>
+                            </div>
+                            <div className='arrow'>
+                                <i className="fa fa-arrow-right-long"></i>
+                            </div>
+                            <div className='project'>
+                                <div className='top-bar'>
+                                    <div className='dot-container'>
+                                        <div className='dot' id='dot-one'></div>
+                                        <div className='dot' id='dot-two'></div>
+                                        <div className='dot' id='dot-three'></div>
+                                    </div>
+                                    <div className='search-bar'>
+                                        {/* <img src='/fortbnb/fortbnb-logo.png'/>
+                                        <span>https://fortbnb.onrender.com</span> */}
+                                    </div>
+                                </div>
+                                <img src='/fortbnb/fortbnb-homepage.png' alt='riddym'/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className='tech'>
                 <h3 className='title'>Technologies</h3>
@@ -89,11 +175,11 @@ function Homepage() {
                         <span className='tooltiptext'>HTML5</span>
                     </div>
                     <div className='tooltip'>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" />
+                        <img id='vert' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" />
                         <span className='tooltiptext'>AWS</span>
                     </div>
                     <div className='tooltip'>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" />
+                        <img id='vert' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" />
                         <span className='tooltiptext'>Node.js</span>
                     </div>
                     <div className='tooltip'>
@@ -101,7 +187,7 @@ function Homepage() {
                         <span className='tooltiptext'>Redux</span>
                     </div>
                     <div className='tooltip'>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask" />
+                        <img id='vert' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask" />
                         <span className='tooltiptext'>Flask</span>
                     </div>
                     <div className='tooltip'>
@@ -123,92 +209,6 @@ function Homepage() {
                     <div className='tooltip'>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" alt="Illustrator" />
                         <span className='tooltiptext'>Illustrator</span>
-                    </div>
-                </div>
-            </div>
-            <div className='projects-container'>
-                <h3 className='title'>Projects</h3>
-                <div className='all-projects'>
-                    <div className='outer-shroud' id='riddym'>
-                        <div className='shroud'>
-                            <div className='project-title'>
-                                <div className='title'>
-                                    <h1>Riddym</h1>
-                                    <h3><span>July '24</span> — Your favorite rhythm game, reimagined.</h3>
-                                </div>
-                            </div>
-                            <div className='arrow'>
-                                <i className="fa fa-arrow-right-long"></i>
-                            </div>
-                            <div className='project'>
-                                <div className='top-bar'>
-                                    <div className='dot-container'>
-                                        <div className='dot' id='dot-one'></div>
-                                        <div className='dot' id='dot-two'></div>
-                                        <div className='dot' id='dot-three'></div>
-                                    </div>
-                                    <div className='search-bar'>
-                                        <img src='/riddym/riddym-logo.png'/>
-                                        <span>https://riddym.onrender.com</span>
-                                    </div>
-                                </div>
-                                <img src='/riddym/riddym-sample.png' alt='riddym'/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='outer-shroud' id='babbl'>
-                        <div className='shroud'>
-                            <div className='project-title'>
-                                <div className='title'>
-                                    <h1>Babbl</h1>
-                                    <h3><span>June '24</span> — Community messaging app.</h3>
-                                </div>
-                            </div>
-                            <div className='arrow'>
-                                <i className="fa fa-arrow-right-long"></i>
-                            </div>
-                            <div className='project'>
-                                <div className='top-bar'>
-                                    <div className='dot-container'>
-                                        <div className='dot' id='dot-one'></div>
-                                        <div className='dot' id='dot-two'></div>
-                                        <div className='dot' id='dot-three'></div>
-                                    </div>
-                                    <div className='search-bar'>
-                                    <img src='/babbl/babbl-logo.png'/>
-                                        <span>https://babbl.onrender.com</span>
-                                    </div>
-                                </div>
-                                <img src='/babbl/babbl-sample.png' alt='riddym'/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='outer-shroud' id='fortbnb'>
-                        <div className='shroud'>
-                            <div className='project-title'>
-                                <div className='title'>
-                                    <h1>fortbnb</h1>
-                                    <h3><span>Feb '24</span> — Airbnb clone with Fortnite places.</h3>
-                                </div>
-                            </div>
-                            <div className='arrow'>
-                                <i className="fa fa-arrow-right-long"></i>
-                            </div>
-                            <div className='project'>
-                                <div className='top-bar'>
-                                    <div className='dot-container'>
-                                        <div className='dot' id='dot-one'></div>
-                                        <div className='dot' id='dot-two'></div>
-                                        <div className='dot' id='dot-three'></div>
-                                    </div>
-                                    <div className='search-bar'>
-                                        <img src='/fortbnb/fortbnb-logo.png'/>
-                                        <span>https://fortbnb.onrender.com</span>
-                                    </div>
-                                </div>
-                                <img src='/fortbnb/fortbnb-homepage.png' alt='riddym'/>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

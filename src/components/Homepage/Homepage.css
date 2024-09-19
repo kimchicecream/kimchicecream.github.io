@@ -16,12 +16,12 @@
 .home-container .hero #paragraph {
     font-weight: bold;
     font-size: 40px;
-    background: linear-gradient(90deg, rgb(95, 97, 255), black, rgb(95, 97, 255), black, rgb(95, 97, 255));
+    background: linear-gradient(to right, rgb(95, 97, 255), rgb(187, 188, 255), rgb(95, 97, 255), rgb(187, 188, 255), rgb(95, 97, 255));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     background-size: 200% 100%;
-    animation: gradientAnimation 6s linear infinite;
+    animation: gradientAnimation 3s linear infinite;
 }
 
 @keyframes gradientAnimation {
@@ -54,6 +54,7 @@
     padding-bottom: 70px;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid rgba(127, 129, 255, 0.375);
 }
 
 .home-container .projects-container .all-projects {
@@ -65,7 +66,7 @@
 .projects-container .all-projects .outer-shroud {
     border-radius: 20px;
     padding: 10px;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(40, 40, 40);
 
     transition: transform 0.3s ease-in-out;
 }
@@ -190,8 +191,8 @@
     overflow: hidden;
     width: 100%;
 
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
     /* border: 1px solid rgba(192, 192, 192, 0.47); */
 
     transform: translateY(40px);
@@ -231,7 +232,7 @@
 
 .home-container .projects-container .project .top-bar {
     /* background-color: rgb(64, 64, 64); */
-    background-color: rgba(61, 61, 61, 0.767);
+    background-color: rgba(87, 87, 87, 0.767);
     height: 35px;
     width: 100%;
     padding: 5px 20px;
@@ -239,10 +240,12 @@
     flex-direction: row;
     align-items: center;
     position: relative;
-    box-shadow: 0px 3px 24px 1px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 3px 24px 1px rgba(0,0,0,0.75); */
     backdrop-filter: blur(10px);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /* border: 1px solid red; */
 }
 
 .home-container .projects-container .project .top-bar .dot-container {
@@ -273,9 +276,9 @@
 
 .home-container .search-bar {
     width: 400px;
-    height: 25px;
+    height: 20px;
     /* background-color: rgb(42, 42, 42); */
-    background-color: rgba(151, 151, 151, 0.217);
+    background-color: rgba(91, 91, 91, 0.187);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -288,7 +291,7 @@
 
 .home-container .search-bar span {
     /* color: rgb(145, 145, 145); */
-    color: rgb(134, 134, 134);
+    color: rgb(178, 178, 178);
 }
 
 .home-container .search-bar img {
@@ -301,7 +304,6 @@
     position: relative;
     /* border: 1px solid red; */
     padding-bottom: 70px;
-    border-bottom: 1px solid rgba(127, 129, 255, 0.375);
 }
 
 .home-container .tech .title,
@@ -337,15 +339,16 @@
     display: inline-block;
     cursor: pointer;
     border-radius: 20px;
-    background-color: rgba(135, 135, 135, 0.177);
+    background-color: rgb(50, 50, 50);
     transition: transform 0.3s ease-out;
     position: relative;
+    display: flex;
 }
 
 .home-container .tech .logos-container .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: rgba(0, 0, 0, 0.404);
+    background-color: rgba(149, 149, 149, 0.404);
     color: #fff;
     text-align: center;
     border-radius: 5px;
@@ -368,15 +371,18 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.404) transparent transparent transparent;
+    border-color: rgba(149, 149, 149, 0.404) transparent transparent transparent;
 }
 
-/* Show the tooltip text when hovering */
+
 .home-container .tech .logos-container .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
+.home-container .tech .logos-container .tooltip #vert {
+    filter: invert(100%) brightness(100%) contrast(100%);
+}
 
 /* ------ FOOTER ------- */
 .home-container .footer {

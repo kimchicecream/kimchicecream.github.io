@@ -6,9 +6,9 @@
 }
 
 html, body {
-  background-color: rgb(246, 241, 255);
+  background-color: #111111;
   /* background-color: white; */
-  color: rgb(60, 60, 60);
+  color: rgb(255, 255, 255);
 }
 
 @font-face {

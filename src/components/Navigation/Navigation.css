@@ -7,7 +7,7 @@
     position: fixed;
     z-index: 666;
 
-    background-color: rgb(246, 241, 255);
+    background-color: #111111;
     border-right: 1px solid rgba(127, 129, 255, 0.375);
 
     /* backdrop-filter: blur(10px); */
@@ -59,12 +59,16 @@
 
 .nav-container a {
     all: unset;
-    color: rgba(0, 0, 0, 0.591);
+    color: rgb(167, 167, 167);
 
     transition: 0.2s ease;
 }
 
+.nav-container #title {
+    color: white;
+}
+
 .nav-container a:hover {
     color: rgb(127, 129, 255);
-    cursor: default;
+    cursor: pointer;
 }

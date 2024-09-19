@@ -16,7 +16,7 @@
     flex-direction: column;
 }
 
-.nav-container img {
+.nav-container .section-one img {
     width: 80px;
     background-color: rgb(182, 175, 255);
 

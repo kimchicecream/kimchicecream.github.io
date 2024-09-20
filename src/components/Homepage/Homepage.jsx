@@ -72,10 +72,7 @@ function Homepage() {
                                         <div className='dot' id='dot-two'></div>
                                         <div className='dot' id='dot-three'></div>
                                     </div>
-                                    <div className='search-bar'>
-                                        {/* <img src='/riddym/riddym-logo.png'/>
-                                        <span>https://riddym.onrender.com</span> */}
-                                    </div>
+                                    <div className='search-bar'></div>
                                 </div>
                                 <img src='/riddym/riddym-sample.png' alt='riddym'/>
                             </div>
@@ -99,10 +96,7 @@ function Homepage() {
                                         <div className='dot' id='dot-two'></div>
                                         <div className='dot' id='dot-three'></div>
                                     </div>
-                                    <div className='search-bar'>
-                                        {/* <img src='/babbl/babbl-logo.png'/>
-                                        <span>https://babbl.onrender.com</span> */}
-                                    </div>
+                                    <div className='search-bar'></div>
                                 </div>
                                 <img src='/babbl/babbl-sample.png' alt='riddym'/>
                             </div>
@@ -126,10 +120,7 @@ function Homepage() {
                                         <div className='dot' id='dot-two'></div>
                                         <div className='dot' id='dot-three'></div>
                                     </div>
-                                    <div className='search-bar'>
-                                        {/* <img src='/fortbnb/fortbnb-logo.png'/>
-                                        <span>https://fortbnb.onrender.com</span> */}
-                                    </div>
+                                    <div className='search-bar'></div>
                                 </div>
                                 <img src='/fortbnb/fortbnb-homepage.png' alt='riddym'/>
                             </div>

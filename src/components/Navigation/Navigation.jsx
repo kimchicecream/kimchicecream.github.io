@@ -1,6 +1,14 @@
 import './Navigation.css';
 
 function Navigation() {
+    // function handleAbout = () => {
+
+    // }
+
+    // function handleCV = () => {
+
+    // }
+
     return (
         <div className="nav-container">
             <div className='section-one'>

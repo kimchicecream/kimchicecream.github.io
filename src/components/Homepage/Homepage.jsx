@@ -102,7 +102,7 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='outer-shroud' id='fortbnb' onClick={handleFortbnbClick}>
+                    <div className='outer-shroud' id='fortbnb' onClick={handleFortbnbClick}> # each project
                         <div className='shroud'>
                             <div className='project-title'>
                                 <div className='title'>

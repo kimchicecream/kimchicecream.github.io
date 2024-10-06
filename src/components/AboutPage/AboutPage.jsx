@@ -8,6 +8,7 @@ function AboutPage() {
             <h3>This is my about page.</h3>
             <div className='hobbies'>
                 <div className='coding'></div>
+                <div className="formula"></div>
             </div>
         </div>
     )

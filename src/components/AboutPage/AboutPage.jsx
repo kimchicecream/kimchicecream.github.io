@@ -9,6 +9,7 @@ function AboutPage() {
             <div className='hobbies'>
                 <div className='coding'></div>
                 <div className="formula"></div>
+                <div className="cars"></div>
             </div>
         </div>
     )

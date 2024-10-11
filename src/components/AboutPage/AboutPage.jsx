@@ -1,6 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import './AboutPage.css';
 
 function AboutPage() {
+    const navigate = useNavigate();
+
+    const handleBack = () => {
+        navigate('/');
+    };
+
     return (
         <div className='about-page'>
             <div className='top'>

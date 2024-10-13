@@ -293,14 +293,15 @@
 .home-container .tech .logos-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: space-between;
+    /* flex-direction: space-between; */
+    justify-content: center;
 
-    gap: 15px;
+    gap: 14px;
 
     width: 100%;
 
     background-color: rgba(40, 40, 40, 0.279);
-    padding: 15px;
+    padding: 25px;
     border-radius: 20px;
 
     /* border: 1px solid red; */
@@ -316,10 +317,17 @@
     display: inline-block;
     cursor: pointer;
     border-radius: 20px;
-    background-color: rgb(50, 50, 50);
+    /* background-color: rgb(50, 50, 50); */
     transition: transform 0.3s ease-out;
     position: relative;
     display: flex;
+
+    transition: 0.6s ease;
+}
+
+.home-container .tech .logos-container .tooltip:hover {
+    background-color: rgba(50, 50, 50, 0.697);
+    cursor: default;
 }
 
 .home-container .tech .logos-container .tooltip .tooltiptext {

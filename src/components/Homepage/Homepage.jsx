@@ -204,9 +204,15 @@ function Homepage() {
             </div>
             <div className='footer'>
                 <div className='left'>
-                    <span id='copyright'><i className="fa-regular fa-copyright"></i>2024 Alex Harim Go</span>
+                    <span id='copyright'><i className="fa-regular fa-copyright"></i>2024 Alex Harim Go. All Rights Reserved.</span>
                 </div>
-                <div className='right'></div>
+                <div className='right'>
+                    <p id='title'>CONNECT</p>
+                    <a href="mailto:gohalexx@gmail.com" className='email' target="_blank">Email</a>
+                    <a href="https://www.linkedin.com/in/alexhgo9/" target="_blank" className='linkedin'>LinkedIn</a>
+                    <a href="https://github.com/kimchicecream" target="_blank" className='github'>Github</a>
+                    <a href="/Resume.pdf" target="_blank" className='resume'>Resume</a>
+                </div>
             </div>
         </div>
     )

@@ -47,8 +47,9 @@ function Homepage() {
             <div className='hero'>
                 <p id='welcome'>Hello!</p>
                 <p id='paragraph'>
-                    Alex is a full-stack software developer specializing in dynamic applications and UI/UX design.
-                    His keen eye for detail and adaptive coding skills bring creativity and innovation to every project.
+                    Alex is a dynamic full-stack developer who blends innovation with sleek UI/UX design to create engaging, intuitive applications.
+                    With a sharp eye for detail and a knack for solving complex problems, he brings fresh creativity to each project,
+                    turning ideas into seamless digital experiences that captivate users.
                 </p>
             </div>
             <div className='projects-container'>
@@ -102,7 +103,7 @@ function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <div className='outer-shroud' id='fortbnb' onClick={handleFortbnbClick}> # each project
+                    <div className='outer-shroud' id='fortbnb' onClick={handleFortbnbClick}>
                         <div className='shroud'>
                             <div className='project-title'>
                                 <div className='title'>

@@ -295,9 +295,13 @@
     flex-wrap: wrap;
     flex-direction: space-between;
 
-    gap: 20px;
+    gap: 15px;
 
     width: 100%;
+
+    background-color: rgba(40, 40, 40, 0.279);
+    padding: 15px;
+    border-radius: 20px;
 
     /* border: 1px solid red; */
 }
@@ -359,8 +363,7 @@
 
 /* ------ FOOTER ------- */
 .home-container .footer {
-    /* border-top: 1px solid rgba(127, 129, 255, 0.375); */
-    background-color: rgba(0, 0, 0, 0.165);
+    background-color: rgba(0, 0, 0, 0.191);
     padding: 30px 50px;
 
     display: flex;
@@ -371,7 +374,7 @@
 .home-container #copyright {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .home-container .footer i {

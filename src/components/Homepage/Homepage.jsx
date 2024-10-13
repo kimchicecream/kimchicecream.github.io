@@ -196,7 +196,6 @@ function Homepage() {
             </div>
             <div className='footer'>
                 <div className='left'>
-                    <span id='name'></span>
                     <span id='copyright'><i className="fa-regular fa-copyright"></i>2024 Alex Harim Go</span>
                 </div>
                 <div className='right'></div>

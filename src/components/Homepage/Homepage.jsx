@@ -173,8 +173,8 @@ function Homepage() {
                         <span className='tooltiptext'>Flask</span>
                     </div>
                     <div className='tooltip'>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" />
-                        <span className='tooltiptext'>Git</span>
+                        <img id ='vert' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt='Express.js'/>
+                        <span className='tooltiptext'>Express.js</span>
                     </div>
                     <div className='tooltip'>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" />
@@ -185,12 +185,20 @@ function Homepage() {
                         <span className='tooltiptext'>SQLite</span>
                     </div>
                     <div className='tooltip'>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt='PostgreSQL'/>
+                        <span className='tooltiptext'>PostgreSQL</span>
+                    </div>
+                    <div className='tooltip'>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop" />
                         <span className='tooltiptext'>Photoshop</span>
                     </div>
                     <div className='tooltip'>
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" alt="Illustrator" />
                         <span className='tooltiptext'>Illustrator</span>
+                    </div>
+                    <div className='tooltip'>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" alt='Blender'/>
+                        <span className='tooltiptext'>Blender</span>
                     </div>
                 </div>
             </div>

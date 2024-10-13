@@ -195,8 +195,11 @@ function Homepage() {
                 </div>
             </div>
             <div className='footer'>
-                <span id='name'>Alex Harim Go</span>
-                <span id='copyright'><i className="fa-regular fa-copyright"></i> 2024</span>
+                <div className='left'>
+                    <span id='name'></span>
+                    <span id='copyright'><i className="fa-regular fa-copyright"></i>2024 Alex Harim Go</span>
+                </div>
+                <div className='right'></div>
             </div>
         </div>
     )

@@ -54,7 +54,7 @@
     padding-bottom: 70px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(127, 129, 255, 0.375);
+    /* border-bottom: 1px solid rgba(127, 129, 255, 0.375); */
 }
 
 .home-container .projects-container .all-projects {
@@ -359,7 +359,8 @@
 
 /* ------ FOOTER ------- */
 .home-container .footer {
-    border-top: 1px solid rgba(127, 129, 255, 0.375);
+    /* border-top: 1px solid rgba(127, 129, 255, 0.375); */
+    background-color: rgba(0, 0, 0, 0.165);
     padding: 30px 50px;
 
     display: flex;

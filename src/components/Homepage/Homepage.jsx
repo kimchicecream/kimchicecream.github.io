@@ -207,11 +207,18 @@ function Homepage() {
                     <span id='copyright'><i className="fa-regular fa-copyright"></i>2024 Alex Harim Go. All Rights Reserved.</span>
                 </div>
                 <div className='right'>
-                    <p id='title'>CONNECT</p>
-                    <a href="mailto:gohalexx@gmail.com" className='email' target="_blank">Email</a>
-                    <a href="https://www.linkedin.com/in/alexhgo9/" target="_blank" className='linkedin'>LinkedIn</a>
-                    <a href="https://github.com/kimchicecream" target="_blank" className='github'>Github</a>
-                    <a href="/Resume.pdf" target="_blank" className='resume'>Resume</a>
+                    <div className="main">
+                        <p id='title'>MAIN</p>
+                        <a href='/' className='projects-link'>Projects</a>
+                        <a href='/about' className='about-link'>About</a>
+                    </div>
+                    <div className='connect'>
+                        <p id='title'>CONNECT</p>
+                        <a href="mailto:gohalexx@gmail.com" className='email' target="_blank">Email</a>
+                        <a href="https://www.linkedin.com/in/alexhgo9/" target="_blank" className='linkedin'>LinkedIn</a>
+                        <a href="https://github.com/kimchicecream" target="_blank" className='github'>Github</a>
+                        <a href="/Resume.pdf" target="_blank" className='resume'>Resume</a>
+                    </div>
                 </div>
             </div>
         </div>

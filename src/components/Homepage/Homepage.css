@@ -372,11 +372,12 @@
 /* ------ FOOTER ------- */
 .home-container .footer {
     background-color: rgba(0, 0, 0, 0.191);
-    padding: 30px 50px;
+    padding: 60px 110px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 300px;
 }
 
 .home-container #copyright {
@@ -393,12 +394,19 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
 
-    border: 1px solid red;
+    height: 100%;
 }
 
 .footer .right {
+    display: flex;
+    gap: 40px;
+
+    height: 100%;
+}
+
+.footer .right .main,
+.footer .right .connect {
     display: flex;
     flex-direction: column;
     gap: 10px;

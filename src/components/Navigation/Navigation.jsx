@@ -6,9 +6,8 @@ function Navigation() {
             <div className='section-one'>
                 <img src='/portfolio_logo.png' alt='Logo'/>
                 <h3 className='about'>About</h3>
-                <h3 className='CV'>CV</h3>
             </div>
-            <span></span>
+            {/* <span></span>
             <div className='section-two'>
                 <p id='title'>PROJECTS</p>
                 <a href="" className='riddym'>Riddym</a>
@@ -22,7 +21,7 @@ function Navigation() {
                 <a href="https://www.linkedin.com/in/alexhgo9/" target="_blank" className='linkedin'>LinkedIn</a>
                 <a href="https://github.com/kimchicecream" target="_blank" className='github'>Github</a>
                 <a href="/Resume.pdf" target="_blank" className='resume'>Resume</a>
-            </div>
+            </div> */}
         </div>
     )
 }

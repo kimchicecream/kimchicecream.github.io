@@ -1,27 +1,20 @@
 .nav-container {
-    height: 100%;
-    width: 250px;
-
-    padding: 50px 0px;
-
+    border: 1px solid red;
     position: fixed;
     z-index: 666;
 
-    background-color: #111111;
-    border-right: 1px solid rgba(127, 129, 255, 0.375);
-
-    /* backdrop-filter: blur(10px); */
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .nav-container .section-one img {
     width: 80px;
-    background-color: rgb(182, 175, 255);
+    background-color: rgb(43, 43, 43);
 
     padding: 10px;
     border-radius: 5px;
+    filter: hue-rotate(180deg) saturate(150%);
 }
 
 .nav-container .section-one {

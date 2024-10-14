@@ -1,13 +1,17 @@
 .home-container {
-    margin-left: 250px;
-    padding-top: 50px;
+    /* padding-top: 170px; */
     position: relative;
+
+    /* border: 1px solid red; */
 }
 
 /* ------ HERO ------- */
 .home-container .hero {
-    margin: 0 50px;
-    padding-bottom: 60px;
+    margin: 0 200px;
+    padding-top: 170px;
+    /* padding-bottom: 60px; */
+    height: 100vh;
+    /* border: 1px solid red; */
     /* margin-bottom: 10px; */
     /* border-bottom: 1px solid rgba(127, 129, 255, 0.375); */
 }
@@ -48,7 +52,7 @@
 
 /* ------ PROJECTS ------- */
 .home-container .projects-container {
-    margin: 0 50px;
+    margin: 0 200px;
     position: relative;
     /* border: 1px solid red; */
     padding-bottom: 70px;
@@ -273,7 +277,7 @@
 
 /* ------ TECH ------- */
 .home-container .tech {
-    margin: 0 50px;
+    margin: 0 200px;
     position: relative;
     /* border: 1px solid red; */
     padding-bottom: 70px;
@@ -372,7 +376,7 @@
 /* ------ FOOTER ------- */
 .home-container .footer {
     background-color: rgba(0, 0, 0, 0.191);
-    padding: 60px 110px;
+    padding: 60px 200px;
 
     display: flex;
     justify-content: space-between;
@@ -431,7 +435,7 @@
 /* ------ SCROLL ANIMATIONS ------- */
 .outer-shroud {
     animation: autoShowAnimation both;
-    animation-timeline: view(100% 5%);
+    animation-timeline: view(100% 2%);
 }
 
 @keyframes autoShowAnimation {

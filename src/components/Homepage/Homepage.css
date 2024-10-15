@@ -9,11 +9,29 @@
 .home-container .hero {
     margin: 0 200px;
     padding-top: 170px;
-    /* padding-bottom: 60px; */
     height: 100vh;
     /* border: 1px solid red; */
-    /* margin-bottom: 10px; */
-    /* border-bottom: 1px solid rgba(127, 129, 255, 0.375); */
+    position: relative;
+}
+
+.home-container .hero i {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(1.5);
+    color: rgb(225, 225, 225);
+
+    font-size: 30px;
+    animation: jump 1.2s ease-in-out infinite;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) scaleX(1.5); /* Default position */
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px) scaleX(1.5); /* Move up by 10px */
+    }
 }
 
 .home-container .hero #welcome,

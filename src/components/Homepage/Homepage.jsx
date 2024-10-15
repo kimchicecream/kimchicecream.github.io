@@ -51,6 +51,7 @@ function Homepage() {
                     With a sharp eye for detail and a knack for solving complex problems, he brings fresh creativity to each project,
                     turning ideas into seamless digital experiences that captivate users.
                 </p>
+                <i className="fa-solid fa-angle-down"></i>
             </div>
             <div className='projects-container'>
                 <h3 className='title'>Projects</h3>

@@ -75,7 +75,7 @@ function Homepage() {
                                     </div>
                                     <div className='search-bar'></div>
                                 </div>
-                                <img src='/riddym/riddym-sample.png' alt='riddym'/>
+                                <img src='/riddym/riddym-sample.png' alt='riddym' loading="lazy"/>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ function Homepage() {
                                     </div>
                                     <div className='search-bar'></div>
                                 </div>
-                                <img src='/babbl/babbl-sample.png' alt='riddym'/>
+                                <img src='/babbl/babbl-sample.png' alt='riddym' loading="lazy"/>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@ function Homepage() {
                                     </div>
                                     <div className='search-bar'></div>
                                 </div>
-                                <img src='/fortbnb/fortbnb-homepage.png' alt='riddym'/>
+                                <img src='/fortbnb/fortbnb-homepage.png' alt='riddym' loading="lazy"/>
                             </div>
                         </div>
                     </div>

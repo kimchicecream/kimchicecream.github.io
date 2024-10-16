@@ -42,20 +42,31 @@ function Homepage() {
         };
     }, []);
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
+    function checkVisibility() {
+        const hiddenElements = document.querySelectorAll('.outer-shroud');
+
+        hiddenElements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const inView = (
+                rect.top < window.innerHeight &&
+                rect.bottom > 0 // Element is in view, even if partially
+            );
+
+            if (inView) {
+                el.classList.add('show'); // Add 'show' class if in view
             } else {
-                entry.target.classList.remove('show');
+                el.classList.remove('show'); // Remove 'show' class if out of view
             }
         });
-    }, {
-        threshold: 0.1 // Adjust this threshold as needed
-    });
+    }
 
-    const hiddenElements = document.querySelectorAll('.outer-shroud');
-    hiddenElements.forEach((el) => observer.observe(el));
+    // Call the checkVisibility function when the page is loaded and on scroll
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+
+    // Call the checkVisibility function when the page is loaded and on scroll
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
 
     return (
         <div className="home-container">

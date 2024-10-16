@@ -19,7 +19,8 @@
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%) scaleX(1.5);
-    color: rgb(225, 225, 225);
+    color: rgb(187, 188, 255);
+    text-shadow: 0 0 200px #ffffff;
 
     font-size: 30px;
     animation: jump 1.2s ease-in-out infinite;
@@ -467,35 +468,11 @@
     }
 } */
 
-/* .outer-shroud {
-    opacity: 0;
-    transform: translateY(100px) scale(0.3);
-    box-shadow: 0 0 1000px rgba(160, 158, 255, 0.944);
-    transition: opacity 0.5s, transform 0.5s ease-out;
-}
-
-.show {
-    animation: autoShowAnimation 1s forwards;
-}
-
-@keyframes autoShowAnimation {
-    from {
-        opacity: 0;
-        transform: translateY(100px) scale(0.3);
-        box-shadow: 0 0 1000px rgba(160, 158, 255, 0.944);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        box-shadow: none;
-    }
-} */
-
 .outer-shroud {
     opacity: 0;
-    transform: translateY(100px) scale(0.3);
+    /* transform: translateY(100px) scale(0.3);
     transition: opacity 1s, transform 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 .outer-shroud.show {

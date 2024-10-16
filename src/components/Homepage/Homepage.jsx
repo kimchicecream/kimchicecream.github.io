@@ -44,7 +44,6 @@ function Homepage() {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            console.log(entry)
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
             } else {
@@ -52,13 +51,11 @@ function Homepage() {
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.1 // Adjust this threshold as needed
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const hiddenElements = document.querySelectorAll('.outer-shroud');
-        // hiddenElements.forEach((el) => observer.observe(el));
-    });
+    const hiddenElements = document.querySelectorAll('.outer-shroud');
+    hiddenElements.forEach((el) => observer.observe(el));
 
     return (
         <div className="home-container">

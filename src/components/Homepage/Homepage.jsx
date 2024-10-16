@@ -42,6 +42,24 @@ function Homepage() {
         };
     }, []);
 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const hiddenElements = document.querySelectorAll('.outer-shroud');
+        // hiddenElements.forEach((el) => observer.observe(el));
+    });
+
     return (
         <div className="home-container">
             <div className='hero'>

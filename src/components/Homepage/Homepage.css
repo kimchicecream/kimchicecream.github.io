@@ -451,7 +451,7 @@
 }
 
 /* ------ SCROLL ANIMATIONS ------- */
-.outer-shroud {
+/* .outer-shroud {
     animation: autoShowAnimation both;
     animation-timeline: view(100% 2%);
 }
@@ -464,5 +464,29 @@
     } to {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+} */
+
+.outer-shroud {
+    opacity: 0;
+    transform: translateY(100px) scale(0.3);
+    box-shadow: 0 0 1000px rgba(160, 158, 255, 0.944);
+    transition: opacity 0.5s, transform 0.5s ease-out;
+}
+
+.show {
+    animation: autoShowAnimation 1s forwards;
+}
+
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(100px) scale(0.3);
+        box-shadow: 0 0 1000px rgba(160, 158, 255, 0.944);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        box-shadow: none;
     }
 }

@@ -15,8 +15,7 @@ function Navigation() {
                     <img src='/portfolio_logo.svg' alt='Logo' className='logo'/>
                 </div>
                 <div className='about' onClick={handleAboutClick}>
-                    <h5>About</h5>
-                    {/* <h6>Full Stack Developer</h6> */}
+                    <img src='/icon_pic.png' />
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
     display: flex;
 }
 
-.nav-container .section-one img {
+.nav-container .section-one .image-container img {
     width: 90px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.142);
@@ -16,6 +16,7 @@
     border-radius: 5px;
     padding: 10px;
 }
+
 
 .section-one .logo {
     filter: invert(55%) sepia(52%) saturate(709%) hue-rotate(198deg) brightness(108%) contrast(101%);
@@ -39,9 +40,20 @@
     cursor: pointer;
 
     transition: 0.4s ease;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 10px;
     cursor: pointer;
+    height: 50px;
+    width: 50px;
+
+    overflow: hidden;
+}
+
+.nav-container .section-one .about img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .nav-container .section-one .about h3 {

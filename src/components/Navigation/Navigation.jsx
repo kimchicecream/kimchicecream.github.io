@@ -15,7 +15,9 @@ function Navigation() {
                     <img src='/portfolio_logo.svg' alt='Logo' className='logo'/>
                 </div>
                 <div className='about' onClick={handleAboutClick}>
-                    <img src='/icon_pic.png' />
+                    <div className='image-i'>
+                        <img src='/icon_pic.png' />
+                    </div>
                 </div>
             </div>
         </div>

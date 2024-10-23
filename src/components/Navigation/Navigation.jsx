@@ -6,7 +6,7 @@ function Navigation() {
 
     const handleAboutClick = () => {
         navigate('/about');
-    };
+    }; //test
 
     return (
         <div className="nav-container">

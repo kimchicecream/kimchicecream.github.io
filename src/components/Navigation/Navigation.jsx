@@ -22,6 +22,6 @@ function Navigation() {
             </div>
         </div>
     )
-} // commit 6
+}
 
 export default Navigation;

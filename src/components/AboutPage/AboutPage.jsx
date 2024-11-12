@@ -14,7 +14,13 @@ function AboutPage() {
                 <i className="fa-solid fa-arrow-left"></i><span>Back</span>
             </div>
             <div className='content'>
-                <h1>Undergoing a design process...</h1>
+                <div className='row-one'>
+                    <div className='profile-block'>
+                    </div>
+                    <div className='description-block'>
+
+                    </div>
+                </div>
             </div>
         </div>
     )

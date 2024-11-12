@@ -1,3 +1,4 @@
+/* ----- BACK BUTTON ----- */
 .about-page {
     box-sizing: border-box;
 }
@@ -28,16 +29,37 @@
 
 .about-page .content {
     display: flex;
-    justify-content: center;
 
-    /* align-items: center; */
+    /* padding: 0 10px; */
+    margin: 30px 130px 0;
 
-    padding: 60px 0;
-    margin: 30px 200px 0;
+    border: 1px solid blue;
+}
 
+.about-page .content {
+
+}
+
+/* ----- ROW ONE ----- */
+.about-page .row-one {
+    display: flex;
+    width: 100%;
     border: 1px solid red;
 }
 
-.about-page .content h1 {
-    color: rgb(55, 55, 55);
+.about-page .row-one .profile-block {
+    width: 500px;
+    height: 700px;
+    background-color: rgb(42, 42, 42);
+    border: 10px solid rgb(60, 60, 60);
+
+    border-radius: 30px;
+}
+
+.about-page .row-one .description-block {
+    width: 500px;
+    height: 700px;
+    background-color: gray;
+
+    border-radius: 30px;
 }

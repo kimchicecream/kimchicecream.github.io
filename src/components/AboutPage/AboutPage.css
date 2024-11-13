@@ -68,7 +68,12 @@
 }
 
 .about-page .row-one .description.block {
-    background-color: rgb(42, 42, 42);
+    /* background-color: rgb(42, 42, 42); */
+    font-size: 35px;
 
     border-radius: 30px;
+}
+
+.about-page .row-one .description.block .text-block {
+    padding: 20px;
 }

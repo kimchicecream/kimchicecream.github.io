@@ -33,7 +33,7 @@
     /* padding: 0 10px; */
     margin: 30px 140px 0;
 
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .about-page .content {
@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     gap: 10px;
     height: 400px;
 }
@@ -72,8 +72,15 @@
     font-size: 35px;
 
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-page .row-one .description.block .text-block {
     padding: 20px;
+}
+
+.about-page .row-one .description.block .text-block .header {
+    font-family: Akira;
 }

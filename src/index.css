@@ -22,3 +22,21 @@ html, body {
   src: url('../public/font/SFPRODISPLAYBOLD.OTF') format('truetype');
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'Akira';
+  src: url('../public/font/Akira-Expanded-Demo.otf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('../public/font/Nexa-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('../public/font/Nexa-Heavy.ttf') format('truetype');
+  font-weight: bold;
+}

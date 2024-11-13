@@ -46,12 +46,12 @@
     grid-template-columns: 1fr 2fr;
     width: 100%;
     border: 1px solid red;
-    gap: 13px;
+    gap: 10px;
+    height: 400px;
 }
 
-.about-page .row-one .profile-block {
-    background-color: rgb(42, 42, 42);
-    border: 10px solid rgb(60, 60, 60);
+.about-page .row-one .profile.block {
+    border: 10px solid rgb(42, 42, 42);
 
     border-radius: 30px;
 
@@ -61,14 +61,14 @@
     overflow: hidden;
 }
 
-.about-page .profile-block img {
+.about-page .profile.block img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.about-page .row-one .description-block {
-    background-color: gray;
+.about-page .row-one .description.block {
+    background-color: rgb(42, 42, 42);
 
     border-radius: 30px;
 }

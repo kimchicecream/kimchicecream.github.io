@@ -40,3 +40,9 @@ html, body {
   src: url('../public/font/Nexa-Heavy.ttf') format('truetype');
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'Lemontea';
+  src: url('../public/font/Lemontea.ttf') format('truetype');
+  font-weight: normal;
+}

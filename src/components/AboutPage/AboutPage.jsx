@@ -11,7 +11,7 @@ function AboutPage() {
     return (
         <div className='about-page'>
             <div className='back-button' onClick={handleBack}>
-                <i className="fa-solid fa-arrow-left"></i><span>Back</span>
+                <i className="fa-solid fa-arrow-left"></i>
             </div>
             <div className='content'>
                 <div className='row-one'>
@@ -22,7 +22,7 @@ function AboutPage() {
                         <div className='text-block'>
                             <p className='header'>Hi, my name is Alex!</p>
                             <p className='body'>
-                                I'm from Guam, born in Gwangju, South Korea, and currently based in Tempe, Arizona.
+                                I'm from Guam, born in Gwangju, South Korea, and currently based in Arizona.
                                 With a passion for design and spatial technology, I aspire to be a part of the advancements in VR and AR,
                                 helping shape the future of digital experiences. I also want to see us colonize Mars in my lifetime!
                             </p>

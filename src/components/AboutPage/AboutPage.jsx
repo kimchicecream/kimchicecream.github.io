@@ -16,9 +16,10 @@ function AboutPage() {
             <div className='content'>
                 <div className='row-one'>
                     <div className='profile-block'>
+                        <img src='IMG_3467.JPG'></img>
                     </div>
                     <div className='description-block'>
-
+                        <p className='text'></p>
                     </div>
                 </div>
             </div>

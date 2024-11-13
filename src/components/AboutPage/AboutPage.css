@@ -31,7 +31,7 @@
     display: flex;
 
     /* padding: 0 10px; */
-    margin: 30px 130px 0;
+    margin: 30px 140px 0;
 
     border: 1px solid blue;
 }
@@ -42,23 +42,32 @@
 
 /* ----- ROW ONE ----- */
 .about-page .row-one {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     width: 100%;
     border: 1px solid red;
+    gap: 13px;
 }
 
 .about-page .row-one .profile-block {
-    width: 500px;
-    height: 700px;
     background-color: rgb(42, 42, 42);
     border: 10px solid rgb(60, 60, 60);
 
     border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-page .profile-block img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .about-page .row-one .description-block {
-    width: 500px;
-    height: 700px;
     background-color: gray;
 
     border-radius: 30px;

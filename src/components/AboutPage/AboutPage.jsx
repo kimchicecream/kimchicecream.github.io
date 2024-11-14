@@ -22,13 +22,14 @@ function AboutPage() {
                         <div className='text-block'>
                             <p className='header'>Hi, my name is Alex!</p>
                             <p className='body'>
-                                I'm from Guam, born in Gwangju, South Korea, and currently based in Arizona.
+                                I'm from Guam and currently based in Arizona.
                                 With a passion for design and spatial technology, I aspire to be a part of the advancements in VR and AR,
                                 helping shape the future of digital experiences. I also want to see us colonize Mars in my lifetime!
                             </p>
                         </div>
                     </div>
                 </div>
+                <div className='row-two'></div>
             </div>
         </div>
     )

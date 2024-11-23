@@ -29,10 +29,12 @@ function AboutPage() {
                         </div>
                     </div>
                 </div>
-                <div className='row-two'></div>
+                <div className='row-two'>
+
+                </div>
             </div>
         </div>
     )
-}
+} // commit 1
 
 export default AboutPage;

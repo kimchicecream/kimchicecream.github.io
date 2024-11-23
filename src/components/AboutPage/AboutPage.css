@@ -51,6 +51,9 @@
     /* border: 1px solid red; */
     gap: 10px;
     height: 400px;
+    background-color: rgb(34, 34, 34);
+    padding: 20px;
+    border-radius: 34px;
 }
 
 .about-page .row-one .profile.block {
@@ -86,6 +89,10 @@
 
 .about-page .row-one .description.block .text-block .header {
     font-family: Akira;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 100px rgba(255, 255, 255, 0.4);
 }
 
 .about-page .row-one .description.block .text-block .body {

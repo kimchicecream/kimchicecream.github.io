@@ -35,6 +35,6 @@ function AboutPage() {
             </div>
         </div>
     )
-} // commit 10
+} // commit 11
 
 export default AboutPage;

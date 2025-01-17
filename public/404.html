@@ -7,16 +7,13 @@
   <body>
     <script>
       // Redirect to the React app, keeping the current path
-      if (window.location.pathname) {
-        const pathname = window.location.pathname;
+      (function () {
+        const pathname = window.location.pathname || '';
         const search = window.location.search || '';
         const hash = window.location.hash || '';
-        const redirectUrl = `/${pathname}${search}${hash}`;
+        const redirectUrl = `${pathname}${search}${hash}`; // Avoid adding extra slash
         window.location.replace(redirectUrl);
-      } else {
-        // Fallback to homepage if something goes wrong
-        window.location.replace('/');
-      }
+      })();
     </script>
     <p>If you are not redirected automatically, please <a href="/">go to the homepage</a>.</p>
   </body>

@@ -1,4 +1,4 @@
-import './machine-demo.css';
+import './MachineDemo.css';
 
 function MachineDemo() {
     return (

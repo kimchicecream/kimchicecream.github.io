@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Page Not Found</title>
   </head>
   <body>
     <script>
-      // Redirect to the React app, keeping the current path
-      (function () {
-        const pathname = window.location.pathname || '';
-        const search = window.location.search || '';
-        const hash = window.location.hash || '';
-        const redirectUrl = `${pathname}${search}${hash}`; // Avoid adding extra slash
-        window.location.replace(redirectUrl);
+      /**
+       * Minimal fallback script for GitHub Pages + React Router (BrowserRouter).
+       * 1. GitHub Pages serves 404.html when a sub-route is requested.
+       * 2. This script reads the original path from the URL.
+       * 3. It rewrites the browser's address so your React app can load the correct route.
+       */
+
+      (function() {
+        // If there's a query string in the URL, parse it so we can restore it after redirecting.
+        if (window.location.search) {
+          const params = new URLSearchParams(window.location.search);
+          // 'p' will hold the real path, 'q' will hold the original query, if used by spa-github-pages approach.
+          const realPath = params.get('p');
+          const originalQuery = params.get('q') ? `?${params.get('q')}` : '';
+          if (realPath) {
+            // Reconstruct the URL with the real path + any original query + hash
+            const newUrl = realPath + originalQuery + window.location.hash;
+            history.replaceState(null, null, newUrl);
+          }
+        }
+        // If there's no query param 'p', or the user typed a direct sub-route like /about
+        // Try an alternative approach:
+        else {
+          // If the user typed /about, GitHub Pages goes to 404.html
+          // We'll just replaceState to the same path so the React app can handle it
+          const { pathname, search, hash } = window.location;
+          // If the pathname is /about, then rewriting with the same path loads index.html but keeps /about in the bar
+          // React Router can then pick it up.
+          history.replaceState(null, null, pathname + search + hash);
+        }
       })();
     </script>
-    <p>If you are not redirected automatically, please <a href="/">go to the homepage</a>.</p>
+
+    <p>Redirecting... If you are not redirected automatically, <a href="/">go to homepage</a>.</p>
   </body>
 </html>

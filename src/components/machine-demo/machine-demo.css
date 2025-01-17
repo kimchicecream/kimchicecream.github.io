@@ -1,0 +1,21 @@
+.machine-demo-page {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+.machine-demo-page .nav-bar {
+    width: 100px;
+    height: 100vh;
+    background-color: rgb(200, 200, 200);
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+
+    position: fixed;
+    left: 0;
+    /* border: 1px solid red; */
+}
+
+.machine-demo-page .content {
+    height: 100vh;
+}

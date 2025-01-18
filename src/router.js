@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Layout from './components/Layout.js';
 import Homepage from './components/Homepage';
 import Riddym from "./components/Riddym/index.js";
@@ -7,36 +7,38 @@ import Fortbnb from './components/Fortbnb/index.js';
 import AboutPage from "./components/AboutPage/index.js";
 import MachineDemo from "./components/MachineDemo/index.js"
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
-        element: <Layout />,
-        children: [
-            {
-                path: '/',
-                element: <Homepage />
-            },
-            {
-                path: '/projects/riddym',
-                element: <Riddym />
-            },
-            {
-                path: '/projects/babbl',
-                element: <Babbl />
-            },
-            {
-                path: '/projects/fortbnb',
-                element: <Fortbnb />
-            },
-            {
-                path: '/about',
-                element: <AboutPage />
-            },
-            {
-                path: '/machine-demo',
-                element: <MachineDemo />
-            }
-        ]
+      // Root route
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Homepage />
+        },
+        {
+          path: "/projects/riddym",
+          element: <Riddym />
+        },
+        {
+          path: "/projects/babbl",
+          element: <Babbl />
+        },
+        {
+          path: "/projects/fortbnb",
+          element: <Fortbnb />
+        },
+        {
+          path: "/about",
+          element: <AboutPage />
+        },
+        {
+          path: "/machine-demo",
+          element: <MachineDemo />
+        }
+      ]
     }
-])
+]);
 
 export default router;

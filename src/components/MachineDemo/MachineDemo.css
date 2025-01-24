@@ -86,20 +86,32 @@
 
 .machine-demo-page .nav-bar .option-item .tooltip {
     position: absolute;
-    left: 50px;
-    background-color: black;
+    left: 40px;
+    background-color: rgb(54, 54, 54);
     color: white;
-    font-size: 12px;
+    font-size: 18px;
     padding: 5px 10px;
     border-radius: 5px;
     white-space: nowrap;
     opacity: 0;
-    transform: translateY(-50%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* transform: translateX(-10%); */
+    transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
+    z-index: 10;
 }
 
 .machine-demo-page .nav-bar .option-item:hover .tooltip {
     opacity: 1;
-    transform: translateY(-50%) translateX(10px);
+    transform: translateY(0%) translateX(10px);
+}
+
+.machine-demo-page .nav-bar .option-item .tooltip::before {
+    content: '';
+    position: absolute;
+    left: -12px; /* Position the arrow slightly outside the tooltip */
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent rgb(54, 54, 54) transparent transparent; /* Create a triangle pointing left */
 }

@@ -24,15 +24,15 @@ function MachineDemo() {
                 <div className='options'>
                     <div className='option-item'>
                         <i className="fa-solid fa-gauge"></i>
-                        <span className='tooltip'>Dashboard</span>
+                        <div className='tooltip'>Dashboard</div>
                     </div>
                     <div className='option-item'>
                         <i className="fa-solid fa-print"></i>
-                        <span className='tooltip'>Machines</span>
+                        <div className='tooltip'>Machines</div>
                     </div>
                     <div className='option-item'>
                         <i className="fa-solid fa-bars-progress"></i>
-                        <span className='tooltip'>Jobs</span>
+                        <div className='tooltip'>Jobs</div>
                     </div>
                 </div>
             </div>

@@ -84,6 +84,9 @@
     /* border: 2px solid blue; */
 }
 
+/* ----------------------------------- */
+/* ------   NAV BAR TOOL TIP   ------- */
+/* ----------------------------------- */
 .machine-demo-page .nav-bar .option-item .tooltip {
     position: absolute;
     left: 40px;
@@ -102,16 +105,16 @@
 
 .machine-demo-page .nav-bar .option-item:hover .tooltip {
     opacity: 1;
-    transform: translateY(0%) translateX(30px);
+    transform: translateY(0%) translateX(35px);
 }
 
 .machine-demo-page .nav-bar .option-item .tooltip::before {
     content: '';
     position: absolute;
-    left: -12px; /* Position the arrow slightly outside the tooltip */
+    left: -12px;
     top: 50%;
     transform: translateY(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: transparent rgb(54, 54, 54) transparent transparent; /* Create a triangle pointing left */
+    border-color: transparent rgb(54, 54, 54) transparent transparent;
 }

@@ -8,10 +8,10 @@ function MachineDashboard() {
         async function fetchData() {
             try {
                 // Uncomment before pushing changes
-                // const response = await fetch('https://kimchicecream-github-io.onrender.com/api/scrape-performance');
+                const response = await fetch('https://kimchicecream-github-io.onrender.com/api/scrape-performance');
 
                 // Uncomment for local tests
-                const response = await fetch('http://localhost:5001/api/scrape-performance');
+                // const response = await fetch('http://localhost:5001/api/scrape-performance');
 
                 const data = await response.json();
                 // const filteredData = data.filter((_, index) => index !== 1 && index !== 3);

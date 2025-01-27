@@ -7,7 +7,10 @@ function MachineDashboard() {
     useEffect(() => {
         async function fetchData() {
             try {
+                // LIVE
                 const response = await fetch('https://kimchicecream-github-io.onrender.com/api/scape-performance');
+                // LOCAL
+                // const response = await fetch('http://localhost:5001/api/scrape-performance');
                 const data = await response.json();
                 setNumbers(data);
             } catch (error) {

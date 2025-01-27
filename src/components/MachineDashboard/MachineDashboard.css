@@ -12,37 +12,83 @@
     /* border: 1px solid red; */
 
     display: flex;
+    gap: 30px;
+}
+
+.machine-dashboard .title h1 {
+    /* border: 1px solid red; */
+    margin-bottom: 30px;
 }
 
 .machine-dashboard .total-stats .container {
     /* border: 1px solid red; */
-    width: 250px;
+    width: 270px;
+    height: 150px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 20px;
+    box-shadow: 1px 6px 13px -5px rgba(0, 0, 0, 0.227);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
 
-    /* padding: 30px; */
+    padding: 0 10px;
 }
 
 .machine-dashboard .total-stats .container .total-orders {
-    background-color: rgb(235, 235, 235);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    font-size: 60px;
-
-    padding: 10px 15px 0px 15px;
+    font-size: 80px;
+    /* border: 1px solid red; */
 }
 
 .machine-dashboard .total-stats .container .info {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-
-    padding: 10px 15px 20px 15px;
-    /* border: 1px solid blue; */
-
-    background-color: rgb(235, 235, 235);
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    padding: 0 10px;
+    /* border: 1px solid red; */
 }
 
 .machine-dashboard .total-stats .container .info i {
     color: rgb(255, 111, 0);
+    cursor: pointer;
+    position: relative;
+
+    transition: 0.4s ease;
+}
+
+.machine-dashboard .total-stats .container .info i:hover {
+    color: rgb(255, 167, 100);
+    /* text-shadow: 0px 0px 14px rgba(255, 111, 0, 0.75); */
+}
+
+.machine-dashboard .total-stats .container .tooltip {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(54, 54, 54);
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.machine-dashboard .total-stats .container .info i:hover + .tooltip {
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.machine-dashboard .total-stats .container .tooltip::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent rgb(54, 54, 54) transparent;
 }

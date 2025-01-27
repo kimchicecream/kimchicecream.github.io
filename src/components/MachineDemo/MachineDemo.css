@@ -100,7 +100,7 @@
     /* transform: translateX(-10%); */
     transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
-    z-index: 10;
+    z-index: 999;
 }
 
 .machine-demo-page .nav-bar .option-item:hover .tooltip {

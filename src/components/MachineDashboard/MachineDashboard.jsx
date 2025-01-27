@@ -29,17 +29,17 @@ function MachineDashboard() {
             <div className='title'>
                 <h1>Dashboard</h1>
             </div>
-            <h3>Performance Data</h3>
             <div className='total-stats'>
                 <div className='container'>
                     {numbers.length > 0 && (
                         <div className='total-orders'>{numbers[0]}</div>
                     )}
                     <div className='info'>
-                        <p>Total open orders</p><i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <div className='tooltip'>
-                        The total number of orders that have not been pulled.
+                        <p>Total open orders</p>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div className='tooltip'>
+                            The total number of orders that have not been pulled.
+                        </div>
                     </div>
                 </div>
                 <div className='container'>
@@ -47,12 +47,14 @@ function MachineDashboard() {
                         <div className='total-orders'>{numbers[2]}</div>
                     )}
                     <div className='info'>
-                        <p>Orders completed today</p><i class="fa-solid fa-circle-info"></i>
-                    </div>
-                    <div className='tooltip'>
-                        The total number of orders fulfilled.
+                        <p>Orders completed today</p>
+                        <i class="fa-solid fa-circle-info"></i>
+                        <div className='tooltip'>
+                            The total number of orders fulfilled.
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     )

@@ -37,7 +37,10 @@ function MachineDemo() {
                         <i className="fa-solid fa-print"></i>
                         <div className='tooltip'>Machines</div>
                     </div>
-                    <div className='option-item'>
+                    <div
+                        className={`option-item ${activeTab === 'jobs' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('jobs')}
+                    >
                         <i className="fa-solid fa-bars-progress"></i>
                         <div className='tooltip'>Jobs</div>
                     </div>
@@ -46,6 +49,7 @@ function MachineDemo() {
             <div className='content'>
             {activeTab === 'dashboard' && <MachineDashboard />}
             {activeTab === 'machines' && <Machines />}
+            {/* {activeTab === 'job && <MachineJobs />} */}
             </div>
         </div>
     )

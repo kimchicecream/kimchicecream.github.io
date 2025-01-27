@@ -92,3 +92,23 @@
     border-style: solid;
     border-color: transparent transparent rgb(54, 54, 54) transparent;
 }
+
+.rectangle-loader {
+    width: 100%;
+    height: 95.5px;
+    background-color: #94a3b881; /* Slate color (matches Tailwind's bg-slate-400) */
+    border-radius: 18px; /* Slightly rounded corners (matches Tailwind's rounded-lg) */
+    animation: pulse 1.5s infinite; /* Add pulsing animation */
+
+    margin-bottom: 10px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}

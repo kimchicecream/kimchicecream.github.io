@@ -31,8 +31,10 @@ function MachineDashboard() {
             </div>
             <div className='total-stats'>
                 <div className='container'>
-                    {numbers.length > 0 && (
+                    {numbers.length > 0 ? (
                         <div className='total-orders'>{numbers[0]}</div>
+                    ) : (
+                        <div className='rectangle-loader'></div>
                     )}
                     <div className='info'>
                         <p>Total open orders</p>
@@ -43,8 +45,10 @@ function MachineDashboard() {
                     </div>
                 </div>
                 <div className='container'>
-                    {numbers.length > 2 && (
+                    {numbers.length > 2 ? (
                         <div className='total-orders'>{numbers[2]}</div>
+                    ) : (
+                        <div className='rectangle-loader'></div>
                     )}
                     <div className='info'>
                         <p>Orders completed today</p>

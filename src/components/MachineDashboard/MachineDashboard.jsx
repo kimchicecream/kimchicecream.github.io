@@ -38,10 +38,8 @@ function MachineDashboard() {
                     )}
                     <div className='info'>
                         <p>Total open orders</p>
-                        <i class="fa-solid fa-circle-info"></i>
-                        <div className='tooltip'>
-                            The total number of orders that have not been pulled.
-                        </div>
+                        <i className="fa-solid fa-circle-info"></i>
+                        <div className='tooltip'>The total number of orders that have not been pulled.</div>
                     </div>
                 </div>
                 <div className='container'>
@@ -52,10 +50,8 @@ function MachineDashboard() {
                     )}
                     <div className='info'>
                         <p>Orders completed today</p>
-                        <i class="fa-solid fa-circle-info"></i>
-                        <div className='tooltip'>
-                            The total number of orders fulfilled.
-                        </div>
+                        <i className="fa-solid fa-circle-info"></i>
+                        <div className='tooltip'>The total number of orders fulfilled.</div>
                     </div>
                 </div>
 

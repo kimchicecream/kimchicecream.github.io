@@ -1,7 +1,7 @@
 import Machines from '../Machines';
 import MachineDashboard from '../MachineDashboard';
 import './MachineDemo.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function MachineDemo() {
 

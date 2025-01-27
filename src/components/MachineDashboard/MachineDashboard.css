@@ -44,13 +44,14 @@
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
+    position: relative;
     /* border: 1px solid red; */
 }
 
 .machine-dashboard .total-stats .container .info i {
+    position: relative;
     color: rgb(255, 111, 0);
     cursor: pointer;
-    position: relative;
 
     transition: 0.4s ease;
 }
@@ -60,10 +61,13 @@
     /* text-shadow: 0px 0px 14px rgba(255, 111, 0, 0.75); */
 }
 
-.machine-dashboard .total-stats .container .tooltip {
+/* ----------------------------------- */
+/* ------   NAV BAR TOOL TIP   ------- */
+/* ----------------------------------- */
+.machine-dashboard .info .tooltip {
     position: absolute;
-    top: 20px;
-    left: 50%;
+    top: 30px;
+    left: 231.5px;
     transform: translateX(-50%);
     background-color: rgb(54, 54, 54);
     color: white;
@@ -77,15 +81,15 @@
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.machine-dashboard .total-stats .container .info i:hover + .tooltip {
-    opacity: 0;
+.machine-dashboard .info i:hover + .tooltip {
+    opacity: 1;
     pointer-events: auto;
 }
 
-.machine-dashboard .total-stats .container .tooltip::before {
+.machine-dashboard .info .tooltip::before {
     content: '';
     position: absolute;
-    top: -6px;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
     border-width: 6px;
@@ -93,17 +97,19 @@
     border-color: transparent transparent rgb(54, 54, 54) transparent;
 }
 
+/* ----------------------------------- */
+/* -------   PULSING LOADER   -------- */
+/* ----------------------------------- */
 .rectangle-loader {
     width: 100%;
-    height: 95.5px;
-    background-color: #94a3b881; /* Slate color (matches Tailwind's bg-slate-400) */
-    border-radius: 18px; /* Slightly rounded corners (matches Tailwind's rounded-lg) */
-    animation: pulse 1.5s infinite; /* Add pulsing animation */
+    height: 85.5px;
+    background-color: #94a3b83d;
+    border-radius: 18px;
+    animation: pulse 1.5s infinite;
 
     margin-bottom: 10px;
 }
 
-/* Pulse Animation */
 @keyframes pulse {
     0%, 100% {
         opacity: 1;

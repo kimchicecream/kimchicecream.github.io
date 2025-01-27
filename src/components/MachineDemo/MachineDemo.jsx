@@ -4,6 +4,7 @@ import './MachineDemo.css';
 import { useEffect, useState } from 'react';
 
 function MachineDemo() {
+    const [activeTab, setActiveTab] = useState('dashboard');
 
     // keep page static
     useEffect(() => {
@@ -22,11 +23,17 @@ function MachineDemo() {
                 </div>
                 <span></span>
                 <div className='options'>
-                    <div className='option-item'>
+                    <div
+                        className={`option-item ${activeTab === 'dashboard' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('dashboard')}
+                    >
                         <i className="fa-solid fa-gauge"></i>
                         <div className='tooltip'>Dashboard</div>
                     </div>
-                    <div className='option-item'>
+                    <div
+                        className={`option-item ${activeTab === 'machines' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('machines')}
+                    >
                         <i className="fa-solid fa-print"></i>
                         <div className='tooltip'>Machines</div>
                     </div>
@@ -37,8 +44,8 @@ function MachineDemo() {
                 </div>
             </div>
             <div className='content'>
-                <MachineDashboard />
-                <Machines />
+            {activeTab === 'dashboard' && <MachineDashboard />}
+            {activeTab === 'machines' && <Machines />}
             </div>
         </div>
     )

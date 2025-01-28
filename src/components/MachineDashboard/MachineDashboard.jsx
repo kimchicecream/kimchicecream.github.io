@@ -22,10 +22,10 @@ function MachineDashboard() {
                 console.log('[LOG] Fetching new data...');
 
                 // uncomment before pushing changes
-                const response = await fetch('https://kimchicecream-github-io.onrender.com/api/scrape-performance');
+                // const response = await fetch('https://kimchicecream-github-io.onrender.com/api/scrape-performance');
 
                 // uncomment for local tests
-                // const response = await fetch('http://localhost:5001/api/scrape-performance');
+                const response = await fetch('http://localhost:5001/api/scrape-performance');
 
                 const data = await response.json();
 

@@ -21,7 +21,7 @@ function MachineDashboard() {
 
                 console.log('[LOG] Fetching new data...');
 
-                // uncomment before pushing changes
+                // uncomment before pushing changes test
                 const response = await fetch('https://kimchicecream-github-io.onrender.com/api/scrape-performance');
 
                 // uncomment for local tests

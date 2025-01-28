@@ -61,7 +61,7 @@ function MachineDashboard() {
                     <div className='info'>
                         <p>Total open orders</p>
                         <i className="fa-solid fa-circle-info"></i>
-                        <div className='tooltip'>The total number of orders that have not been pulled.</div>
+                        <div className='tooltip'>The total number of orders in queue.</div>
                     </div>
                 </div>
                 <div className='container'>

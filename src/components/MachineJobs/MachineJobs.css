@@ -1,17 +1,49 @@
 .machine-jobs-container {
-    text-align: center;
-    padding: 20px;
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border: 3px solid red;
+    overflow-y: scroll;
 }
 
-.machine-selector {
-    margin: 20px 0;
+.machine-jobs-container .title h1 {
+    margin-bottom: 30px;
+}
+
+.machine-jobs-container .machines-module {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    /* height: 100%; */
+
+    border: 2px solid blue;
+}
+
+.machines-module .machine-selector  {
+    flex: 1;
+    max-width: 50%;
+
+    border: 2px solid green;
+}
+
+.machines-module .job-data {
+    flex: 1;
+    max-width: 50%;
+    /* min-height: 300px; */
+
+    border: 2px solid purple;
 }
 
 .machine-list {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 10px;
     justify-content: center;
+    flex-direction: column;
+
+    border: 2px solid red;
 }
 
 .machine-list button {
@@ -38,9 +70,6 @@
     font-weight: bold;
 }
 
-.job-data {
-    margin-top: 20px;
-}
 
 .job-group {
     border: 1px solid #ddd;

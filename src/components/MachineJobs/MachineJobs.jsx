@@ -11,9 +11,9 @@ function MachineJobs() {
         setLoading(true);
         setSelectedMachine(machine);
         try {
-            // const response = await fetch(`https://kimchicecream-github-io.onrender.com/api/scrape-jobs?machine=${machine}`);
+            const response = await fetch(`https://kimchicecream-github-io.onrender.com/api/scrape-jobs?machine=${machine}`);
             // uncomment for local tests
-            const response = await fetch(`http://localhost:5001/api/scrape-jobs?machine=${machine}`);
+            // const response = await fetch(`http://localhost:5001/api/scrape-jobs?machine=${machine}`);
             const data = await response.json();
             setJobData(data.extractedData || []);
         } catch (error) {

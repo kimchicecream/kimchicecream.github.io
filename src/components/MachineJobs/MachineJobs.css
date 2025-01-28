@@ -1,0 +1,54 @@
+.machine-jobs-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.machine-selector {
+    margin: 20px 0;
+}
+
+.machine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.machine-list button {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.machine-list button:hover {
+    background: #0056b3;
+}
+
+.machine-list button.selected {
+    background: #ffcc00;
+    color: black;
+}
+
+.loading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.job-data {
+    margin-top: 20px;
+}
+
+.job-group {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    background: #f9f9f9;
+}
+
+.job-group h4 {
+    margin-bottom: 5px;
+}

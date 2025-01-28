@@ -1,5 +1,6 @@
 import Machines from '../Machines';
 import MachineDashboard from '../MachineDashboard';
+import MachineJobs from '../MachineJobs/MachineJobs';
 import './MachineDemo.css';
 import { useEffect, useState } from 'react';
 
@@ -47,9 +48,9 @@ function MachineDemo() {
                 </div>
             </div>
             <div className='content'>
-            {activeTab === 'dashboard' && <MachineDashboard />}
-            {activeTab === 'machines' && <Machines />}
-            {/* {activeTab === 'job && <MachineJobs />} */}
+                {activeTab === 'dashboard' && <MachineDashboard />}
+                {activeTab === 'machines' && <Machines />}
+                {activeTab === 'jobs' && <MachineJobs />}
             </div>
         </div>
     )

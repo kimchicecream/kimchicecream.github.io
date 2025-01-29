@@ -10,10 +10,14 @@ function MachineJobs() {
     async function fetchJobData(machine) {
         setLoading(true);
         setSelectedMachine(machine);
+
+        // dynamically determine backend URL
+        const BASE_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:5001'
+            : 'https://kimchicecream-github-io.onrender.com';
+
         try {
-            const response = await fetch(`https://kimchicecream-github-io.onrender.com/api/scrape-jobs?machine=${machine}`);
-            // uncomment for local testing
-            // const response = await fetch(`http://localhost:5001/api/scrape-jobs?machine=${machine}`);
+            const response = await fetch(`${BASE_URL}/api/scrape-jobs?machine=${machine}`);
             const data = await response.json();
             setJobData(data.extractedData || []);
         } catch (error) {

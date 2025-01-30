@@ -54,15 +54,16 @@ function MachineJobs() {
                     ) : (
                         selectedMachine && jobData.length > 0 ? (
                             <div>
-                                <h3>Jobs for Machine {selectedMachine}</h3>
+                                <h3>Machine {selectedMachine}</h3>
+                                <h4>Current total jobs:</h4>
                                 {jobData.map((group, index) => (
                                     <div key={index} className='job-group'>
-                                        <h4>{group.pdfFile}</h4>
-                                        <ul>
+                                        <h4 className='main-file-title'>{group.pdfFile}</h4>
+                                        <div className='file-names'>
                                             {group.dataRows.map((row, i) => (
-                                                <li key={i}>{row.join(' | ')}</li>
+                                                <div className='files' key={i}>{row.join(' | ')}</div>
                                             ))}
-                                        </ul>
+                                        </div>
                                     </div>
                                 ))}
                             </div>

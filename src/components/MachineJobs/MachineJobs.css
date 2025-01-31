@@ -145,6 +145,7 @@
 
 .general-info .info i:hover {
     color: rgb(248, 205, 157);
+    cursor: pointer;
 }
 
 .general-info .box .tooltip {

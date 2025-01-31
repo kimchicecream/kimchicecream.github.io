@@ -56,7 +56,7 @@ function MachineDashboard() {
     return (
         <div className='machine-dashboard'>
             <div className='title'>
-                <h1>Dashboard</h1>
+                <h1>Hello, operator</h1>
             </div>
             <div className='total-stats'>
                 <div className='container'>

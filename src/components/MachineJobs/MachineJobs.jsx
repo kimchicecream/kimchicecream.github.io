@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import './MachineJobs.css';
 
 function MachineJobs() {
-    const [machines, setMachines] = useState(Array.from({ length: 110 - 71 + 1 }, (_, i) => i + 71));
+    const [machines] = useState(Array.from({ length: 110 - 71 + 1 }, (_, i) => i + 71));
     const [selectedMachine, setSelectedMachine] = useState(null);
     const [jobData, setJobData] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loadingMachine, setLoadingMachine] = useState(false);
+    const [loading, setLoading] = useState();
 
     // const machinesColumn1 = Array.from({ length: (90 - 72) / 2 + 1 }, (_, i) => 72 + i * 2); // even: 72-90
     // const machinesColumn2 = Array.from({ length: (89 - 71) / 2 + 1 }, (_, i) => 71 + i * 2); // odd: 71-89
@@ -21,7 +22,12 @@ function MachineJobs() {
     }, []);
 
     async function fetchJobData(machine) {
-        setLoading(true);
+        if (selectedMachine === machine) {
+            setSelectedMachine(null);
+            return;
+        }
+
+        setLoadingMachine(machine);
         setSelectedMachine(machine);
 
         // dynamically determine backend URL
@@ -37,9 +43,12 @@ function MachineJobs() {
             setJobData(data.extractedData || []);
         } catch (error) {
             console.error('Error fetching machine data:', error);
-            setJobData([]); // clear job data if request fails
+            setJobData(prevData => ({
+                ...prevData,
+                [machine]: []
+            })); // clear job data if request fails
         } finally {
-            setLoading(false);
+            setLoadingMachine(false);
         }
     }
 
@@ -50,55 +59,84 @@ function MachineJobs() {
             </div> */}
             <div className='general-info'>
                 <div className='left-column'>
-                    <div className='big-box' id='1'></div>
-                    <div className='big-box' id='2'></div>
+                    <div className='big box' id='b1'>
+                        <div className='info-num'>
+                            {loading ? (
+                                <div className='rectangle-loader'></div>
+                            ) : (
+                                <div className='total-orders'>{'N/A'}</div>
+                            )}
+                        </div>
+                        <div className='info'>
+                            <p>Open machines</p>
+                            <i className="fa-solid fa-circle-info"></i>
+                            <div className='tooltip'>The total number of unemployed machines. Unbelievable!</div>
+                        </div>
+                    </div>
+                    <div className='big box' id='b2'>
+                        <div className='info-num'>
+                            {loading ? (
+                                <div className='rectangle-loader'></div>
+                            ) : (
+                                <div className='total-orders'>{'N/A'}</div>
+                            )}
+                        </div>
+                        <div className='info'>
+                            <p>Total jobs</p>
+                            <i className="fa-solid fa-circle-info"></i>
+                            <div className='tooltip'>The total number of jobs currently running.</div>
+                        </div>
+                    </div>
                 </div>
                 <div className='right-column'>
-                    <div className='small-box' id='1'></div>
-                    <div className='small-box' id='2'></div>
-                    <div className='small-box' id='3'></div>
-                    <div className='small-box' id='4'></div>
                 </div>
             </div>
             <div className='machines-module'>
+                <div className='title'>
+                    <h3>Your Penbots <p>{machines.length}</p></h3>
+                </div>
                 <div className='machine-selector'>
-                <div className='machine-list'>
+                    <div className='machine-list'>
+                        <div className='labels'></div>
                         {machines.map((machine) => (
-                            <button
-                                key={machine}
-                                className={selectedMachine === machine ? 'selected' : ''}
-                                onClick={() => fetchJobData(machine)}
-                            >
-                                Machine {machine}
-                            </button>
+                            <div key={machine} className='machine-container'>
+                                <button
+                                    className={`machine-button ${selectedMachine === machine ? 'selected' : ''}`}
+                                    onClick={() => fetchJobData(machine)}
+                                >
+                                    <div className='machine-num'>{machine}</div>
+                                    <div className='num-jobs'>1</div>
+                                    <div className='pages-left'>58</div>
+                                    <div className='note-env'>NE</div>
+                                    <div className='status'>
+                                        <div className='led'></div>
+                                    </div>
+                                </button>
+                                {selectedMachine === machine && (
+                                    <div className='job-dropdown'>
+                                        {loadingMachine === machine ? (
+                                            <div className='loading'>Loading...</div>
+                                        ) : (
+                                            jobData[machine]?.length > 0 ? (
+                                                jobData[machine].map((group, index) => (
+                                                    <div key={index} className='job-group'>
+                                                        <h4 className='main-file-title'>{group.pdfFile}</h4>
+                                                        <div className='file-names'>
+                                                            {group.dataRows.map((row, i) => (
+                                                                <div className='files' key={i}>{row.join(' | ')}</div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className='no-jobs'>No jobs found.</p>
+                                            )
+                                        )}
+                                    </div>
+                                )}
+                            </div>
                         ))}
                     </div>
-                </div>
-                <div className='job-data'>
-                    {loading ? (
-                        <div className='loading'>Loading...</div>
-                    ) : (
-                        selectedMachine && jobData.length > 0 ? (
-                            <div>
-                                <h3>Machine {selectedMachine}</h3>
-                                <h4>Current total jobs:</h4>
-                                {jobData.map((group, index) => (
-                                    <div key={index} className='job-group'>
-                                        <h4 className='main-file-title'>{group.pdfFile}</h4>
-                                        <div className='file-names'>
-                                            {group.dataRows.map((row, i) => (
-                                                <div className='files' key={i}>{row.join(' | ')}</div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        ) : selectedMachine ? (
-                            <p>Unbelievable. No jobs here so far!</p>
-                        ) : (
-                            <p>Select a machine to see jobs.</p>
-                        )
-                    )}
                 </div>
             </div>
         </div>

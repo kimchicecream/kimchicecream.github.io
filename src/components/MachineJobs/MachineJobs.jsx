@@ -5,6 +5,9 @@ function MachineJobs() {
     const [machines] = useState(Array.from({ length: 110 - 71 + 1 }, (_, i) => i + 71));
     const [selectedMachine, setSelectedMachine] = useState(null);
     const [jobData, setJobData] = useState([]);
+    const [pageCounts, setPageCounts] = useState({});
+    const [jobCounts, setJobCounts] = useState({});
+    const [noteEnvStatus, setNoteEnvStatus] = useState({});
     const [loadingMachine, setLoadingMachine] = useState(false);
     const [loading, setLoading] = useState();
 
@@ -22,35 +25,81 @@ function MachineJobs() {
     }, []);
 
     async function fetchJobData(machine) {
-        if (selectedMachine === machine) {
-            setSelectedMachine(null);
-            return;
-        }
-
-        setLoadingMachine(machine);
-        setSelectedMachine(machine);
-
-        // dynamically determine backend URL
-        const BASE_URL = window.location.hostname === 'localhost'
-            ? 'http://localhost:5001'
-            : 'https://kimchicecream-github-io.onrender.com';
-
         try {
-            // const response = await fetch(`https://kimchicecream-github-io.onrender.com/api/scrape-jobs?machine=${machine}`);
-            // change port for new machines
             const response = await fetch(`http://localhost:5001/api/scrape-jobs?machine=${machine}`);
             const data = await response.json();
-            setJobData(data.extractedData || []);
+
+            const totalPages = data.extractedData.reduce((sum, group) => sum + group.dataRows.length, 0);
+            const totalJobs = data.extractedData.length;
+            const status = determineNoteEnvStatus(data.extractedData);
+
+            setJobData(prevData => ({
+                ...prevData,
+                [machine]: data.extractedData || []
+            }));
+
+            setPageCounts(prevCounts => ({
+                ...prevCounts,
+                [machine]: totalPages
+            }));
+
+            setJobCounts(prevCounts => ({
+                ...prevCounts,
+                [machine]: totalJobs
+            }));
+
+            setNoteEnvStatus(prevStatus => ({
+                ...prevStatus,
+                [machine]: status
+            }));
         } catch (error) {
             console.error('Error fetching machine data:', error);
+
             setJobData(prevData => ({
                 ...prevData,
                 [machine]: []
-            })); // clear job data if request fails
-        } finally {
-            setLoadingMachine(false);
+            }));
+
+            setPageCounts(prevCounts => ({
+                ...prevCounts,
+                [machine]: 0
+            }));
+
+            setJobCounts(prevCounts => ({
+                ...prevCounts,
+                [machine]: 0
+            }));
+
+            setNoteEnvStatus(prevStatus => ({
+                ...prevStatus,
+                [machine]: '--'
+            }));
         }
     }
+
+    function determineNoteEnvStatus(extractedData) {
+        for (const group of extractedData) {
+            if (group.pdfFile.endsWith('_envelope.pdf')) return 'Envelope';
+            if (group.pdfFile.endsWith('_note.pdf')) return 'Note';
+        }
+        return '--';
+    }
+
+    useEffect(() => {
+        machines.forEach(machine => {
+            fetchJobData(machine);
+        });
+
+        const interval = setInterval(() => {
+            machines.forEach(machine => {
+                fetchJobData(machine);
+            });
+        }, 30000);
+
+        return () => clearInterval(interval);
+    }, [machines]);
+
+    const totalJobs = Object.values(jobCounts).reduce((acc, count) => acc + count, 0);
 
     return (
         <div className='machine-jobs-container'>
@@ -78,11 +127,11 @@ function MachineJobs() {
                             {loading ? (
                                 <div className='rectangle-loader'></div>
                             ) : (
-                                <div className='total-orders'>{'N/A'}</div>
+                                <div className='total-jobs'>{totalJobs}</div>
                             )}
                         </div>
                         <div className='info'>
-                            <p>Total jobs</p>
+                            <p>Total jobs running</p>
                             <i className="fa-solid fa-circle-info"></i>
                             <div className='tooltip'>The total number of jobs currently running.</div>
                         </div>
@@ -116,7 +165,7 @@ function MachineJobs() {
                             <div key={machine} className='machine-container'>
                                 <button
                                     className={`machine-button ${selectedMachine === machine ? 'selected' : ''}`}
-                                    onClick={() => fetchJobData(machine)}
+                                    onClick={() => setSelectedMachine(selectedMachine === machine ? null : machine)}
                                 >
                                     <div className='status'>
                                         <div className='led-container'>
@@ -126,9 +175,9 @@ function MachineJobs() {
                                         </div>
                                         <div className='machine-num'>{machine}</div>
                                     </div>
-                                    <div className='num-jobs'>1</div>
-                                    <div className='pages-left'>58</div>
-                                    <div className='note-env'>NE</div>
+                                    <div className='num-jobs'>{jobCounts[machine] !== undefined ? `${jobCounts[machine]}` : '--'}</div>
+                                    <div className='pages-left'>{pageCounts[machine] !== undefined ? `${pageCounts[machine]}` : '--'}</div>
+                                    <div className='note-env'>{noteEnvStatus[machine]}</div>
                                     <div className='attributes'>
                                         <div className='att-jira'>
                                             <p>JIRA</p>
@@ -143,15 +192,11 @@ function MachineJobs() {
                                         {loadingMachine === machine ? (
                                             <div className='loading'>Loading...</div>
                                         ) : (
-                                            jobData.length > 0 ? (
-                                                jobData.map((group, index) => (
+                                            jobData[machine]?.length > 0 ? (
+                                                jobData[machine].map((group, index) => (
                                                     <div key={index} className='job-group'>
                                                         <h4 className='main-file-title'>{group.pdfFile}</h4>
-                                                        {/* <div className='file-names'>
-                                                            {group.dataRows.map((row, i) => (
-                                                                <div className='files' key={i}>{row.join(' | ')}</div>
-                                                            ))}
-                                                        </div> */}
+                                                        <p className='page-count'>Pages: {group.dataRows.length}</p>
                                                     </div>
                                                 ))
                                             ) : (

@@ -87,6 +87,20 @@ function MachineJobs() {
                             <div className='tooltip'>The total number of jobs currently running.</div>
                         </div>
                     </div>
+                    <div className='big box' id='b3'>
+                        <div className='info-num'>
+                            {loading ? (
+                                <div className='rectangle-loader'></div>
+                            ) : (
+                                <div className='total-orders'>{'N/A'}</div>
+                            )}
+                        </div>
+                        <div className='info'>
+                            <p>Next batch suggestion</p>
+                            <i className="fa-solid fa-circle-info"></i>
+                            <div className='tooltip'>The combination of Notes and Envelopes suggested for the next batch of orders.</div>
+                        </div>
+                    </div>
                 </div>
                 <div className='right-column'>
                 </div>
@@ -104,12 +118,24 @@ function MachineJobs() {
                                     className={`machine-button ${selectedMachine === machine ? 'selected' : ''}`}
                                     onClick={() => fetchJobData(machine)}
                                 >
-                                    <div className='machine-num'>{machine}</div>
+                                    <div className='status'>
+                                        <div className='led-container'>
+                                            <div className="led blue"></div>
+                                            <div className="led green"></div>
+                                            <div className="led gray"></div>
+                                        </div>
+                                        <div className='machine-num'>{machine}</div>
+                                    </div>
                                     <div className='num-jobs'>1</div>
                                     <div className='pages-left'>58</div>
                                     <div className='note-env'>NE</div>
-                                    <div className='status'>
-                                        <div className='led'></div>
+                                    <div className='attributes'>
+                                        <div className='att-jira'>
+                                            <p>JIRA</p>
+                                        </div>
+                                        <div className='bad-feeder'>
+                                            <p>BAD FEED</p>
+                                        </div>
                                     </div>
                                 </button>
                                 {selectedMachine === machine && (
@@ -117,8 +143,8 @@ function MachineJobs() {
                                         {loadingMachine === machine ? (
                                             <div className='loading'>Loading...</div>
                                         ) : (
-                                            jobData[machine]?.length > 0 ? (
-                                                jobData[machine].map((group, index) => (
+                                            jobData.length > 0 ? (
+                                                jobData.map((group, index) => (
                                                     <div key={index} className='job-group'>
                                                         <h4 className='main-file-title'>{group.pdfFile}</h4>
                                                         <div className='file-names'>

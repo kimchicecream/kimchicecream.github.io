@@ -100,6 +100,7 @@ function MachineJobs() {
     }, [machines]);
 
     const totalJobs = Object.values(jobCounts).reduce((acc, count) => acc + count, 0);
+    const totalOpenMachines = machines.filter(machine => jobCounts[machine] === 0).length;
 
     return (
         <div className='machine-jobs-container'>
@@ -113,7 +114,7 @@ function MachineJobs() {
                             {loading ? (
                                 <div className='rectangle-loader'></div>
                             ) : (
-                                <div className='total-orders'>{'N/A'}</div>
+                                <div className='total-open-machines'>{totalOpenMachines}</div>
                             )}
                         </div>
                         <div className='info'>
@@ -160,7 +161,17 @@ function MachineJobs() {
                 </div>
                 <div className='machine-selector'>
                     <div className='machine-list'>
-                        <div className='labels'></div>
+                        <div className='button-labels'>
+                            <div className='t1'>
+                                <div className="c1">Status</div>
+                                <div className="c2">Machine</div>
+                                <div className="c3">Type</div>
+                            </div>
+                            <div className="c4">Jobs</div>
+                            <div className="c5">Pages Left</div>
+                            <div className="c6">Note/Env</div>
+                            <div className="c7">Attributes</div>
+                        </div>
                         {machines.map((machine) => (
                             <div key={machine} className='machine-container'>
                                 <button
@@ -169,22 +180,21 @@ function MachineJobs() {
                                 >
                                     <div className='status'>
                                         <div className='led-container'>
-                                            <div className="led blue"></div>
-                                            <div className="led green"></div>
-                                            <div className="led gray"></div>
+                                            <div className={`led ${jobCounts[machine] > 0 ? 'green' : 'blue'}`}></div> {/* will have to adjust for down machines */}
                                         </div>
                                         <div className='machine-num'>{machine}</div>
+                                        <div className='machine-type'>N/E</div>
                                     </div>
                                     <div className='num-jobs'>{jobCounts[machine] !== undefined ? `${jobCounts[machine]}` : '--'}</div>
                                     <div className='pages-left'>{pageCounts[machine] !== undefined ? `${pageCounts[machine]}` : '--'}</div>
                                     <div className='note-env'>{noteEnvStatus[machine]}</div>
                                     <div className='attributes'>
-                                        <div className='att-jira'>
+                                        {/* <div className='att-jira'>
                                             <p>JIRA</p>
                                         </div>
                                         <div className='bad-feeder'>
                                             <p>BAD FEED</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </button>
                                 {selectedMachine === machine && (

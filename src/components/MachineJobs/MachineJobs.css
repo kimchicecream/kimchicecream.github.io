@@ -138,6 +138,76 @@
     /* border: 1px solid red; */
 }
 
+.machine-jobs-container .button-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    font-size: 13px;
+    color: gray;
+}
+
+.machine-jobs-container .button-labels .t1 {
+    display: flex;
+    gap: 10px;
+}
+
+/* ----------------------------------- */
+/* ------    BUTTON COLUMNS    ------- */
+/* ----------------------------------- */
+.machine-jobs-container .status {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    border: 1px solid red;
+}
+
+.machine-jobs-container .num-jobs {
+    border: 1px solid red;
+}
+
+.machine-jobs-container .pages-left {
+    border: 1px solid red;
+}
+
+.machine-jobs-container .note-env {
+    border: 1px solid red;
+}
+
+.machine-jobs-container .attributes {
+    border: 1px solid red;
+}
+
+/* ----------------------------------- */
+/* ------      LED LIGHTS      ------- */
+/* ----------------------------------- */
+.led-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+}
+
+.led {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.led.green {
+    background-color: #53ff53;
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+.led.blue {
+    background-color: #3ca4ff;
+    box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 30px #00aaff;
+}
+
 /* ----------------------------------- */
 /* ------   NAV BAR TOOL TIP   ------- */
 /* ----------------------------------- */

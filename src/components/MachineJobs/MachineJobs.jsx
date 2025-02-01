@@ -147,11 +147,11 @@ function MachineJobs() {
                                                 jobData.map((group, index) => (
                                                     <div key={index} className='job-group'>
                                                         <h4 className='main-file-title'>{group.pdfFile}</h4>
-                                                        <div className='file-names'>
+                                                        {/* <div className='file-names'>
                                                             {group.dataRows.map((row, i) => (
                                                                 <div className='files' key={i}>{row.join(' | ')}</div>
                                                             ))}
-                                                        </div>
+                                                        </div> */}
                                                     </div>
                                                 ))
                                             ) : (

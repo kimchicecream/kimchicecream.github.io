@@ -34,39 +34,36 @@ function Homepage() {
             });
         });
 
+        // Set up Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
+        });
+
+        // Observe all project elements
+        const projectElements = document.querySelectorAll('.outer-shroud');
+        projectElements.forEach(element => {
+            observer.observe(element);
+        });
+
         return () => {
             logos.forEach(logo => {
                 logo.removeEventListener('mousemove', null);
                 logo.removeEventListener('mouseleave', null);
             });
+            projectElements.forEach(element => {
+                observer.unobserve(element);
+            });
         };
     }, []);
-
-    function checkVisibility() {
-        const hiddenElements = document.querySelectorAll('.outer-shroud');
-
-        hiddenElements.forEach((el) => {
-            const rect = el.getBoundingClientRect();
-            const inView = (
-                rect.top < window.innerHeight &&
-                rect.bottom > 0 // Element is in view, even if partially
-            );
-
-            if (inView) {
-                el.classList.add('show'); // Add 'show' class if in view
-            } else {
-                el.classList.remove('show'); // Remove 'show' class if out of view
-            }
-        });
-    }
-
-    // Call the checkVisibility function when the page is loaded and on scroll
-    window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('load', checkVisibility);
-
-    // Call the checkVisibility function when the page is loaded and on scroll
-    window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('load', checkVisibility);
 
     return (
         <div className="home-container">

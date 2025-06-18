@@ -18,7 +18,7 @@ function AboutPage() {
                     <div className='profile block'>
                         <img src='IMG_3469.JPG'></img>
                     </div>
-                    <div className='description block'>
+                    {/* <div className='description block'>
                         <div className='text-block'>
                             <p className='header'>Hi, my name is Alex!</p>
                             <p className='body'>
@@ -27,7 +27,7 @@ function AboutPage() {
                                 helping shape the future of digital experiences. I also want to see us colonize Mars in my lifetime!
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='row-two'>
 
@@ -35,6 +35,6 @@ function AboutPage() {
             </div>
         </div>
     )
-} // commit 10
+}
 
 export default AboutPage;

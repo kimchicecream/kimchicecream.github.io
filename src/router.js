@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Layout from './components/Layout.js';
 import Homepage from './components/Homepage';
 import Riddym from "./components/Riddym/index.js";
@@ -7,7 +7,7 @@ import Fortbnb from './components/Fortbnb/index.js';
 import AboutPage from "./components/AboutPage/index.js";
 import MachineDemo from "./components/MachineDemo/index.js"
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     {
       // Root route
       path: "/",

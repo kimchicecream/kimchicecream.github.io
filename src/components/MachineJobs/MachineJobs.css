@@ -160,23 +160,23 @@
     align-items: center;
     gap: 20px;
 
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .machine-jobs-container .num-jobs {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .machine-jobs-container .pages-left {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .machine-jobs-container .note-env {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .machine-jobs-container .attributes {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* ----------------------------------- */

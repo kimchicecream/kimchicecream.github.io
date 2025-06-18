@@ -21,22 +21,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Alex Go</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
   </head>
   <body>
-    <script>
-      /**
-       * Minimal fallback script for GitHub Pages + React Router (BrowserRouter).
-       * When a user visits a sub-route (e.g. /about), GH Pages serves 404.html.
-       * This script updates the URL to /about (the same path),
-       * so the already-loaded React app can handle it (no full reload).
-       */
-      (function() {
-        const { pathname, search, hash } = window.location;
-        // If your path is /about, we rewrite the address bar to /about
-        // React Router should then handle that route client-side.
-        history.replaceState(null, null, pathname + search + hash);
-      })();
-    </script>
     <div id="root"></div>
   </body>
 </html>

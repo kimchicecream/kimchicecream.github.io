@@ -29,13 +29,16 @@ function MachineJobs() {
             const response = await fetch(`http://localhost:5001/api/scrape-jobs?machine=${machine}`);
             const data = await response.json();
 
-            const totalPages = data.extractedData.reduce((sum, group) => sum + group.dataRows.length, 0);
-            const totalJobs = data.extractedData.length;
-            const status = determineNoteEnvStatus(data.extractedData);
+            // Ensure extractedData exists and is an array before using reduce
+            const extractedData = Array.isArray(data.extractedData) ? data.extractedData : [];
+
+            const totalPages = extractedData.reduce((sum, group) => sum + group.dataRows.length, 0);
+            const totalJobs = extractedData.length;
+            const status = determineNoteEnvStatus(extractedData);
 
             setJobData(prevData => ({
                 ...prevData,
-                [machine]: data.extractedData || []
+                [machine]: extractedData
             }));
 
             setPageCounts(prevCounts => ({
@@ -76,6 +79,7 @@ function MachineJobs() {
             }));
         }
     }
+
 
     function determineNoteEnvStatus(extractedData) {
         for (const group of extractedData) {

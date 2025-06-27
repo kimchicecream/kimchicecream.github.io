@@ -7,7 +7,10 @@
 
 /* ------ HERO ------- */
 .home-container .hero {
-    margin: 0 200px;
+    max-width: 2800px;
+    margin: 0 auto;
+    padding-left: clamp(16px, 10vw, 200px);
+    padding-right: clamp(16px, 10vw, 200px);
     padding-top: 170px;
     height: 100vh;
     /* border: 1px solid red; */
@@ -65,13 +68,17 @@
 .home-container .hero #paragraph {
     display: flex;
     font-weight: bold;
-    font-size: 45px;
-    line-height: 1.2;
+    font-size: clamp(1rem, 2.5vw, 2.2rem);
+    line-height: 1.5;
+    margin: 0 auto;
 }
 
 /* ------ PROJECTS ------- */
 .home-container .projects-container {
-    margin: 0 200px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: clamp(16px, 10vw, 200px);
+    padding-right: clamp(16px, 10vw, 200px);
     position: relative;
     /* border: 1px solid red; */
     padding-bottom: 70px;
@@ -296,7 +303,10 @@
 
 /* ------ TECH ------- */
 .home-container .tech {
-    margin: 0 200px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: clamp(16px, 10vw, 200px);
+    padding-right: clamp(16px, 10vw, 200px);
     position: relative;
     /* border: 1px solid red; */
     padding-bottom: 70px;

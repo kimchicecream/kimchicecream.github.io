@@ -70,8 +70,8 @@ function Homepage() {
             <div className='hero'>
                 <p id='welcome'>Hello!</p>
                 <p id='paragraph'>
-                    Alex is a dynamic full-stack developer who blends innovation with sleek UI/UX design to create engaging, intuitive applications.
-                    With a sharp eye for detail and a knack for solving complex problems, he brings fresh creativity to each project,
+                    I'm Alex, a dynamic full-stack developer who blends innovation with sleek UI/UX design to create engaging, intuitive applications.
+                    With a sharp eye for detail and a knack for solving complex problems, I bring fresh creativity to each project,
                     turning ideas into seamless digital experiences that captivate users.
                 </p>
                 <i className="fa-solid fa-angle-down"></i>

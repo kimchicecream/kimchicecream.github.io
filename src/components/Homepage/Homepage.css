@@ -7,14 +7,15 @@
 
 /* ------ HERO ------- */
 .home-container .hero {
-    max-width: 2800px;
+    max-width: 1440px;
     margin: 0 auto;
     padding-left: clamp(16px, 10vw, 200px);
     padding-right: clamp(16px, 10vw, 200px);
     padding-top: 170px;
-    height: 100vh;
+    /* height: 100vh; */
     /* border: 1px solid red; */
     position: relative;
+    margin-bottom: 200px;
 }
 
 .home-container .hero i {
@@ -27,6 +28,8 @@
 
     font-size: 30px;
     animation: jump 1.2s ease-in-out infinite;
+
+    opacity: 0;
 }
 
 @keyframes jump {
@@ -60,17 +63,24 @@
 }
 
 .home-container .hero #welcome {
+    /* font-size: clamp(2rem, 10vw, 10rem); */
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 30px;
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .home-container .hero #paragraph {
-    display: flex;
+    font-size: clamp(1.2rem, 6vw, 3rem);
+    line-height: 1.1;
     font-weight: bold;
-    font-size: clamp(1rem, 2.5vw, 2.2rem);
-    line-height: 1.5;
-    margin: 0 auto;
+    /* text-align: center; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ------ PROJECTS ------- */

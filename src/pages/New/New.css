@@ -1,0 +1,22 @@
+.homepage {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100vh;
+
+    padding: 50px 150px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.homepage .sticky-profile {
+    min-width: 300px;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.homepage .contents-section {
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+}

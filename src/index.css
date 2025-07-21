@@ -46,3 +46,7 @@ html, body {
   src: url('../public/font/Lemontea.ttf') format('truetype');
   font-weight: normal;
 }
+
+:root {
+  --primary:
+}

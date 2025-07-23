@@ -1,22 +1,88 @@
 .homepage {
-    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
     height: 100vh;
-
     padding: 50px 150px;
-
-    display: flex;
-    gap: 20px;
 }
 
+ /* STICKY PROFILE */
 .homepage .sticky-profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 30px;
     min-width: 300px;
-    height: 100%;
-    border: 1px solid red;
+    border-radius: var(--default-radius);
+    background-color: hsl(240, 2%, 12%);
+    border: 1px solid var(--jet);
 }
+
+.sticky-profile img {
+    width: 200px;
+    border-radius: var(--default-radius);
+}
+
+.sticky-profile .name {
+    display: flex;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(180deg, #fff, #adadad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sticky-profile span {
+    height: 2px;
+    width: 100%;
+    background-color: var(--jet);
+}
+
+.info-bite-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  align-self: flex-start;
+
+  gap: 20px;
+}
+
+
+
+
+
+
+
 
 .homepage .contents-section {
     width: 100%;
     height: 100%;
+
+    border-radius: var(--default-radius);
     border: 1px solid red;
+
+    flex: 1;
+    overflow-y: auto;
+
+    background-color: hsl(240, 2%, 12%);
+}
+
+@media (max-width: 1024px) {
+    .homepage {
+        flex-direction: column; /* Stack instead of side-by-side */
+        padding: 20px; /* Optional: reduce padding for mobile */
+        height: auto; /* Let height grow naturally */
+    }
+
+    .homepage .sticky-profile,
+    .homepage .contents-section {
+        min-width: 100%; /* Full width on mobile */
+        height: auto; /* Let height adjust to content */
+    }
 }

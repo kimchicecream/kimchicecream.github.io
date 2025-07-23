@@ -7,7 +7,6 @@
 
 html, body {
   background-color: #111111;
-  /* background-color: white; */
   color: rgb(255, 255, 255);
 }
 
@@ -48,5 +47,10 @@ html, body {
 }
 
 :root {
-  --primary:
+  --default-radius: 20px;
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+  --border-gradient-onyx: linear-gradient(to bottom right,hsl(0,0%,25%),hsla(0,0%,25%,0) 50%);
+  --bg-gradient: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251), hsla(240, 2%, 11%, 0)), hsl(240, 2%, 13%);
+  --jet: hsl(0, 0%, 22%);
+  --lighter-jet: hsl(0, 0%, 51%);
 }

@@ -1,5 +1,5 @@
 * {
-  font-family: 'SF Pro';
+    font-family: 'SF Pro';
   margin: 0;
   border: 0;
   box-sizing: border-box;
@@ -53,4 +53,8 @@ html, body {
   --bg-gradient: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251), hsla(240, 2%, 11%, 0)), hsl(240, 2%, 13%);
   --jet: hsl(0, 0%, 22%);
   --lighter-jet: hsl(0, 0%, 51%);
+
+  --default-transition: 0.5s ease;
+
+  --primary: rgb(170, 174, 255);
 }

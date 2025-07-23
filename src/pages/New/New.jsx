@@ -13,12 +13,14 @@ function New() {
                 <div className="name">Alex Go</div>
                 <span></span>
                 <div className="info-bite-container">
-                    <InformationBite id='info-one' icon={<LuMapPin />} title="LOCATION" option="Tempe, AZ" />
+                    <InformationBite id='info-one' icon={<LuMapPin />} title="LOCATION" option="Tempe, AZ, USA" />
                     <InformationBite id='info-one' icon={<LuMail />} title="EMAIL" option="gohalexx@gmail.com" />
-                    <InformationBite id='info-one' icon={<LuGithub />} title="GITHUB" option="@kimchicecream" />
-                    <InformationBite id='info-one' icon={<LuLinkedin />} title="LINKEDIN" option="in/alexxgo" />
+                    <InformationBite id='info-one' icon={<LuGithub />} title="GITHUB" option={<a href="https://github.com/kimchicecream" target="_blank" rel="noopener noreferrer">@kimchicecream</a>} />
+                    <InformationBite id='info-one' icon={<LuLinkedin />} title="LINKEDIN" option={<a href="https://www.linkedin.com/in/alexxgo" target="_blank" rel="noopener noreferrer">in/alexxgo</a>} />
                 </div>
-
+                <div className="sticky-footer">
+                    <div className=""></div>
+                </div>
             </div>
             <div className="contents-section"></div>
         </div>

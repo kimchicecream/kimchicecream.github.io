@@ -3,7 +3,6 @@
     justify-content: center;
     gap: 20px;
     width: 100%;
-    height: 100vh;
     padding: 50px 150px;
 }
 
@@ -12,35 +11,42 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    padding: 50px 30px;
-    min-width: 300px;
+    /* gap: 20px; */
+    padding: 40px 30px;
+    min-width: 280px;
+    max-width: 280px;
     border-radius: var(--default-radius);
     background-color: hsl(240, 2%, 12%);
     border: 1px solid var(--jet);
+
+    overflow: hidden;
 }
 
 .sticky-profile img {
     width: 200px;
     border-radius: var(--default-radius);
+    box-shadow: var(--shadow-1);
 }
 
 .sticky-profile .name {
     display: flex;
     justify-content: center;
-
     font-size: 30px;
     font-weight: bold;
-    background: linear-gradient(180deg, #fff, #adadad);
+    background: linear-gradient(180deg, #fff, #8e8e8e);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    margin: 10px 0;
+    cursor: default;
 }
 
 .sticky-profile span {
     height: 2px;
     width: 100%;
     background-color: var(--jet);
+    margin-bottom: 20px;
 }
 
 .info-bite-container {
@@ -53,8 +59,15 @@
   gap: 20px;
 }
 
+.info-bite-container a {
+    all: unset;
+    transition: var(--default-transition);
+}
 
-
+.info-bite-container a:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
 
 
 

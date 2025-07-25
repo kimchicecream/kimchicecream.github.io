@@ -18,9 +18,12 @@ function New() {
                     <InformationBite id='info-two' icon={<LuMail />} title="EMAIL" option="gohalexx@gmail.com" />
                     <InformationBite id='info-three' icon={<LuGithub />} title="GITHUB" option={<a href="https://github.com/kimchicecream" target="_blank" rel="noopener noreferrer">@kimchicecream</a>} />
                     <InformationBite id='info-four' icon={<LuLinkedin />} title="LINKEDIN" option={<a href="https://www.linkedin.com/in/alexxgo" target="_blank" rel="noopener noreferrer">in/alexxgo</a>} />
-                    <div className="more-links">
-                        <a href='' className="github"></a>
-                    </div>
+                </div>
+                <div className="more-links">
+                    <a href='https://github.com/kimchicecream' className="github"><LuGithub /></a>
+                    <a href='https://www.linkedin.com/in/alexxgo' className="linkedin"><LuLinkedin /></a>
+                    {/* <a href='' className="dribbble"></a>
+                    <a href='' className="medium"></a> */}
                 </div>
                 <span></span>
                 <div className="sticky-footer">

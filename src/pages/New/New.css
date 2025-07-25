@@ -122,7 +122,25 @@
     color: var(--primary-darker);
 }
 
+.more-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 
+    margin-top: 30px;
+}
+
+.more-links a {
+    color: var(--eerie-black-2);
+    font-size: 20px;
+
+    width: 100%;
+    transition: var(--default-transition);
+}
+
+.more-links a:hover {
+    color: var(--primary);
+}
 
 /* CONTENTS SECTION */
 .homepage .contents-section {

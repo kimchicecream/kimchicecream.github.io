@@ -1,10 +1,31 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--eerie-black);
+    border: 1px solid var(--jet);
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+
+}
+
 .homepage {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
     width: 100%;
-    padding: 50px 150px;
+    padding: 60px 150px;
 }
 
  /* STICKY PROFILE */
@@ -16,7 +37,7 @@
     min-width: 280px;
     /* max-width: 280px; */
     border-radius: var(--default-radius);
-    background-color: hsl(240, 2%, 12%);
+    background-color: var(--eerie-black);
     border: 1px solid var(--jet);
 
     overflow: hidden;
@@ -55,17 +76,17 @@
     height: 1px;
     width: 100%;
     background-color: var(--jet);
-    margin: 20px;
+    margin: 30px;
 }
 
 .info-bite-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    align-self: flex-start;
 
-  gap: 30px;
+    gap: 30px;
 }
 
 .info-bite-container a {
@@ -77,6 +98,31 @@
     cursor: pointer;
     color: var(--primary);
 }
+
+.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.sticky-footer .copyright {
+    font-size: 16px;
+}
+
+.sticky-footer .hyperlinks a {
+    all: unset;
+    font-size: 16px;
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.sticky-footer .hyperlinks a:hover {
+    cursor: pointer;
+    color: var(--primary-darker);
+}
+
+
 
 /* CONTENTS SECTION */
 .homepage .contents-section {

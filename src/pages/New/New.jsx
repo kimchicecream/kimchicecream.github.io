@@ -21,7 +21,10 @@ function New() {
                 </div>
                 <span></span>
                 <div className="sticky-footer">
-                    <div className=""></div>
+                    <div className="copyright">© 2025 Alex Go</div>
+                    <div className="hyperlinks">
+                        <a href='https://github.com/kimchicecream/kimchicecream.github.io' target="_blank" rel="noopener noreferrer">Code</a>
+                    </div>
                 </div>
             </div>
             <div className="contents-section"></div>

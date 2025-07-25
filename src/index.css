@@ -1,5 +1,5 @@
 * {
-    font-family: 'SF Pro';
+  font-family: 'SF Pro';
   margin: 0;
   border: 0;
   box-sizing: border-box;
@@ -8,6 +8,12 @@
 html, body {
   background-color: #111111;
   color: rgb(255, 255, 255);
+}
+
+body {
+  overflow-y: scroll;
+  border-right: 10px solid transparent;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -55,6 +61,8 @@ html, body {
   --lighter-jet: hsl(0, 0%, 51%);
 
   --default-transition: 0.5s ease;
+  --eerie-black: hsl(240, 2%, 12%);
 
   --primary: rgb(170, 174, 255);
+  --primary-darker: rgb(119, 123, 185);
 }

@@ -1,20 +1,31 @@
 .navbar-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    /* margin: 20px; */
 
     background-color: var(--charcoal-gray);
     border-radius: 16px;
+
+    box-shadow: var(--shadow-2);
 
     /* border: 1px solid red; */
 }
 
 .navbar-container button {
     all: unset;
+    /* font-weight: bold; */
+
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    transition: var(--default-transition);
 }
 
 .navbar-container button:hover {
-
+    background-color: var(--eerie-black);
+    color: var(--primary);
+    cursor: pointer;
 }

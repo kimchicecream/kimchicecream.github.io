@@ -4,6 +4,7 @@ import { LuMapPin } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
 import { LuLinkedin } from "react-icons/lu";
+import { LuDribbble } from "react-icons/lu";
 import { RiThreadsFill } from "react-icons/ri";
 import "./New.css";
 
@@ -25,8 +26,7 @@ function New() {
                     <a href='https://github.com/kimchicecream' target="_blank" className="github"><LuGithub /></a>
                     <a href='https://www.linkedin.com/in/alexxgo' target="_blank" className="linkedin"><LuLinkedin /></a>
                     <a href='https://www.threads.com/@sainta1ex' target="_blank" className="threads"><RiThreadsFill /></a>
-                    {/* <a href='' className="dribbble"></a>
-                    <a href='' className="medium"></a> */}
+                    <a href='https://dribbble.com/alexxgo' target="_blank" className="threads"><LuDribbble /></a>
                 </div>
                 <span></span>
                 <div className="sticky-footer">

@@ -10,12 +10,6 @@ html, body {
   color: rgb(255, 255, 255);
 }
 
-body {
-  overflow-y: scroll;
-  border-right: 10px solid transparent;
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: 'SF Pro';
   src: url('../public/font/SFPRODISPLAYREGULAR.OTF') format('truetype');

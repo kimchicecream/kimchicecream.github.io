@@ -1,4 +1,5 @@
 import InformationBite from "../../components/InformationBite/InformationBite";
+import NavBar from "../../components/NavBar/NavBar";
 import { LuMapPin } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
@@ -33,7 +34,9 @@ function New() {
                     </div>
                 </div>
             </div>
-            <div className="contents-section"></div>
+            <div className="contents-section">
+                <NavBar />
+            </div>
         </div>
     )
 }

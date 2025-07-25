@@ -131,8 +131,9 @@
 /* CONTENTS SECTION */
 .homepage .contents-section {
     min-width: 900px;
+    height: 3000px;
     border-radius: var(--default-radius);
-    background-color: hsl(240, 2%, 12%);
+    background-color: var(--eerie-black);
     border: 1px solid var(--jet);
 }
 

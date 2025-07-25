@@ -4,6 +4,7 @@ import { LuMapPin } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";
 import { LuLinkedin } from "react-icons/lu";
+import { RiThreadsFill } from "react-icons/ri";
 import "./New.css";
 
 function New() {
@@ -21,8 +22,9 @@ function New() {
                     <InformationBite id='info-four' icon={<LuLinkedin />} title="LINKEDIN" option={<a href="https://www.linkedin.com/in/alexxgo" target="_blank" rel="noopener noreferrer">in/alexxgo</a>} />
                 </div>
                 <div className="more-links">
-                    <a href='https://github.com/kimchicecream' className="github"><LuGithub /></a>
-                    <a href='https://www.linkedin.com/in/alexxgo' className="linkedin"><LuLinkedin /></a>
+                    <a href='https://github.com/kimchicecream' target="_blank" className="github"><LuGithub /></a>
+                    <a href='https://www.linkedin.com/in/alexxgo' target="_blank" className="linkedin"><LuLinkedin /></a>
+                    <a href='https://www.threads.com/@sainta1ex' target="_blank" className="threads"><RiThreadsFill /></a>
                     {/* <a href='' className="dribbble"></a>
                     <a href='' className="medium"></a> */}
                 </div>

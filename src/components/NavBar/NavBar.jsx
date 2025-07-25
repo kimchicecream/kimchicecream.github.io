@@ -2,8 +2,11 @@ import "./NavBar.css";
 
 function NavBar() {
     return (
-        <div className="nav-container">
-            <div className="about-me">About Me</div>
+        <div className="navbar-container">
+            <button className="about-me">About Me</button>
+            <button className="about-me">Resume</button>
+            <button className="about-me">Projects</button>
+            <button className="about-me">Blog</button>
         </div>
     );
 };

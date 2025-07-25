@@ -43,7 +43,7 @@
 }
 
 .sticky-profile .occupation {
-    background-color: rgb(43, 43, 43);
+    background-color: var(--charcoal-gray);
     padding: 5px 10px;
     border-radius: 7px;
 

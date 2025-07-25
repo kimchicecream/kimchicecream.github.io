@@ -1,0 +1,20 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 20px;
+    margin: 20px;
+
+    background-color: var(--charcoal-gray);
+    border-radius: 16px;
+
+    /* border: 1px solid red; */
+}
+
+.navbar-container button {
+    all: unset;
+}
+
+.navbar-container button:hover {
+
+}

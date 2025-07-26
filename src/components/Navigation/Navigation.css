@@ -6,6 +6,8 @@
     width: 100vw;
 
     display: flex;
+
+    visibility: hidden;
 }
 
 .nav-container .section-one .image-container img {

@@ -10,7 +10,7 @@ import { LuGithub } from "react-icons/lu";
 import { LuLinkedin } from "react-icons/lu";
 import { LuDribbble } from "react-icons/lu";
 import { RiThreadsFill } from "react-icons/ri";
-import "./Homepage.css";
+import "./Home.css";
 
 function Homepage() {
     return (

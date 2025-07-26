@@ -1,5 +1,6 @@
 import PageTitle from '../../components/PageTitle';
 import FeaturedProjectsCard from '../../components/FeaturedProjectsCard';
+import GitHubCalendar from 'react-github-calendar';
 import './About.css';
 
 function About() {
@@ -31,8 +32,12 @@ function About() {
                             projectName="babbl"
                         /> */}
                     </div>
-                    <button className='more-projects'>See More Projects</button>
                 </div>
+                <GitHubCalendar
+                    username="kimchicecream"
+                    colorScheme="dark"
+                    fontSize={16}
+                />
             </div>
         </>
     );

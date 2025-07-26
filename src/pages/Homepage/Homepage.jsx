@@ -40,6 +40,9 @@ function Homepage() {
                 <div className='navbar-wrapper'>
                     <NavBar />
                 </div>
+                <div className="contents">
+                    <div className="message">This section is under construction!</div>
+                </div>
             </div>
         </div>
     )

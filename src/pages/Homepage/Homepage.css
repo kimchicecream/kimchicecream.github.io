@@ -122,28 +122,41 @@
 }
 
 
-
-
-
-
-
-
 /* CONTENTS SECTION */
 .homepage .contents-section {
     min-width: 900px;
-    /* height: 3000px; */
-    border-radius: var(--default-radius);
-    background-color: var(--eerie-black);
-    border: 1px solid var(--jet);
 
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* border: 1px solid red; */
 }
 
 .contents-section .navbar-wrapper {
     display: flex;
     justify-content: center;
+    min-width: 900px;
+    border-radius: var(--default-radius);
+    background-color: var(--eerie-black);
+    border: 1px solid var(--jet);
 
     width: 100%;
+}
+
+.contents-section .contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 900px;
+    height: 1000px;
+    border-radius: var(--default-radius);
+    background-color: var(--eerie-black);
+    border: 1px solid var(--jet);
+
+
+    /* border: 1px solid red; */
 }
 
 /* CUSTOM SCROLL BAR */

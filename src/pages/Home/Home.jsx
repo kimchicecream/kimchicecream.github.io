@@ -48,7 +48,7 @@ function Home() {
                 <div className="occupation">Software Engineer & Web Developer</div>
                 <span></span>
                 <div className="info-bite-container">
-                    <InformationBite id='info-one' icon={<LuMapPin />} title="LOCATION" option="Tempe, AZ, USA" />
+                    <InformationBite id='info-one' icon={<LuMapPin />} title="LOCATION" option="Phoenix, Arizona 🇺🇸" />
                     <InformationBite id='info-two' icon={<LuMail />} title="EMAIL" option="gohalexx@gmail.com" />
                     <InformationBite id='info-three' icon={<LuGithub />} title="GITHUB" option={<a href="https://github.com/kimchicecream" target="_blank" rel="noopener noreferrer">@kimchicecream</a>} />
                     <InformationBite id='info-four' icon={<LuLinkedin />} title="LINKEDIN" option={<a href="https://www.linkedin.com/in/alexxgo" target="_blank" rel="noopener noreferrer">in/alexxgo</a>} />

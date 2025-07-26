@@ -8,5 +8,9 @@
 }
 
 .intro-block p {
-    line-height: 1.3em;
+    line-height: 1.4em;
+}
+
+.intro-block p span {
+    color: var(--primary);
 }

@@ -1,5 +1,9 @@
 import InformationBite from "../../components/InformationBite/InformationBite";
 import NavBar from "../../components/NavBar/NavBar";
+import About from "../About/About";
+import Resume from "../Resume";
+import Projects from "../Projects";
+import Blog from "../Blog";
 import { LuMapPin } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { LuGithub } from "react-icons/lu";

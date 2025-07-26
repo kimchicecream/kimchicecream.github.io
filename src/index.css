@@ -66,4 +66,6 @@ html, body {
 
   --primary: rgb(170, 174, 255);
   --primary-darker: rgb(119, 123, 185);
+
+  --outline: 1px solid red;
 }

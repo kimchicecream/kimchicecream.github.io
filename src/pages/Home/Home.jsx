@@ -11,36 +11,34 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
-  const [activeSection, setActiveSection] = useState("about");
-  const location = useLocation();
+    const [activeSection, setActiveSection] = useState("about");
+    const location = useLocation();
 
-  // ✅ Update URL WITHOUT triggering a route change
-  useEffect(() => {
-    if (activeSection === "about") {
-      window.history.replaceState(null, "", "/");
-    } else {
-      window.history.replaceState(null, "", `/${activeSection}`);
-    }
-  }, [activeSection]);
+    useEffect(() => {
+        if (activeSection === "about") {
+        window.history.replaceState(null, "", "/");
+        } else {
+        window.history.replaceState(null, "", `/${activeSection}`);
+        }
+    }, [activeSection]);
 
-  // ✅ Sync initial tab with URL on load
-  useEffect(() => {
-    const path = location.pathname.replace("/", "");
-    if (path) setActiveSection(path);
-  }, [location.pathname]);
+    useEffect(() => {
+        const path = location.pathname.replace("/", "");
+        if (path) setActiveSection(path);
+    }, [location.pathname]);
 
-  const renderContent = () => {
-    switch (activeSection) {
-      case "resume":
-        return <Resume />;
-      case "projects":
-        return <Projects />;
-      case "blog":
-        return <Blog />;
-      default:
-        return <About />;
-    }
-  };
+    const renderContent = () => {
+        switch (activeSection) {
+        case "resume":
+            return <Resume />;
+        case "projects":
+            return <Projects />;
+        case "blog":
+            return <Blog />;
+        default:
+            return <About />;
+        }
+    };
 
     return (
         <div className="homepage">

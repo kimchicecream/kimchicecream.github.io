@@ -4,15 +4,44 @@ import About from "../About/About";
 import Resume from "../Resume";
 import Projects from "../Projects";
 import Blog from "../Blog";
-import { LuMapPin } from "react-icons/lu";
-import { LuMail } from "react-icons/lu";
-import { LuGithub } from "react-icons/lu";
-import { LuLinkedin } from "react-icons/lu";
-import { LuDribbble } from "react-icons/lu";
+import { LuMapPin, LuMail, LuGithub, LuLinkedin, LuDribbble } from "react-icons/lu";
 import { RiThreadsFill } from "react-icons/ri";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Home.css";
 
-function Homepage() {
+function Home() {
+  const [activeSection, setActiveSection] = useState("about");
+  const location = useLocation();
+
+  // ✅ Update URL WITHOUT triggering a route change
+  useEffect(() => {
+    if (activeSection === "about") {
+      window.history.replaceState(null, "", "/");
+    } else {
+      window.history.replaceState(null, "", `/${activeSection}`);
+    }
+  }, [activeSection]);
+
+  // ✅ Sync initial tab with URL on load
+  useEffect(() => {
+    const path = location.pathname.replace("/", "");
+    if (path) setActiveSection(path);
+  }, [location.pathname]);
+
+  const renderContent = () => {
+    switch (activeSection) {
+      case "resume":
+        return <Resume />;
+      case "projects":
+        return <Projects />;
+      case "blog":
+        return <Blog />;
+      default:
+        return <About />;
+    }
+  };
+
     return (
         <div className="homepage">
             <div className="sticky-profile">
@@ -42,17 +71,14 @@ function Homepage() {
             </div>
             <div className="contents-section">
                 <div className='navbar-wrapper'>
-                    <NavBar />
+                    <NavBar activeSection={activeSection} setActiveSection={setActiveSection} />
                 </div>
                 <div className="contents">
-                    <About />
-                    <Resume />
-                    <Projects />
-                    <Blog />
+                    {renderContent()}
                 </div>
             </div>
         </div>
     )
 }
 
-export default Homepage;
+export default Home;

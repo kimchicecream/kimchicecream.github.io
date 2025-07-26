@@ -150,7 +150,6 @@
     align-items: center;
 
     min-width: 900px;
-    height: 1000px;
     border-radius: var(--default-radius);
     background-color: var(--eerie-black);
     border: 1px solid var(--jet);

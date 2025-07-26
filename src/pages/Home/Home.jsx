@@ -54,10 +54,10 @@ function Home() {
                     <InformationBite id='info-four' icon={<LuLinkedin />} title="LINKEDIN" option={<a href="https://www.linkedin.com/in/alexxgo" target="_blank" rel="noopener noreferrer">in/alexxgo</a>} />
                 </div>
                 <div className="more-links">
-                    <a href='https://github.com/kimchicecream' target="_blank" className="github"><LuGithub /></a>
-                    <a href='https://www.linkedin.com/in/alexxgo' target="_blank" className="linkedin"><LuLinkedin /></a>
-                    <a href='https://www.threads.com/@sainta1ex' target="_blank" className="threads"><RiThreadsFill /></a>
-                    <a href='https://dribbble.com/alexxgo' target="_blank" className="threads"><LuDribbble /></a>
+                    <a href='https://github.com/kimchicecream' target="_blank" rel="noreferrer" className="github"><LuGithub /></a>
+                    <a href='https://www.linkedin.com/in/alexxgo' target="_blank" rel="noreferrer" className="linkedin"><LuLinkedin /></a>
+                    <a href='https://www.threads.com/@sainta1ex' target="_blank" rel="noreferrer" className="threads"><RiThreadsFill /></a>
+                    <a href='https://dribbble.com/alexxgo' target="_blank" rel="noreferrer" className="threads"><LuDribbble /></a>
                 </div>
                 <span></span>
                 <div className="sticky-footer">

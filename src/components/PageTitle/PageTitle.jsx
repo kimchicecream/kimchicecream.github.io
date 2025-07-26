@@ -1,8 +1,10 @@
 import './PageTitle.css';
 
-function PageTitle() {
+function PageTitle({ pageTitle }) {
     return (
-        <></>
+        <>
+            <div className='page-title-container'>{pageTitle}</div>
+        </>
     );
 };
 

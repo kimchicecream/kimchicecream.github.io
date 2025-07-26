@@ -1,10 +1,11 @@
+import PageTitle from '../../components/PageTitle';
 import './About.css';
 
 function About() {
     return (
         <>
             <div className='about-container'>
-                <div className='title'>About Me</div>
+                <PageTitle pageTitle='About Alex' />
             </div>
         </>
     );

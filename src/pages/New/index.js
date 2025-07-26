@@ -1,3 +1,3 @@
-import New from './New';
+import Homepage from './Homepage';
 
-export default New;
+export default Homepage;

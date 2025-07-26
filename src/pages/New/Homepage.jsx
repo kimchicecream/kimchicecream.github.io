@@ -6,9 +6,9 @@ import { LuGithub } from "react-icons/lu";
 import { LuLinkedin } from "react-icons/lu";
 import { LuDribbble } from "react-icons/lu";
 import { RiThreadsFill } from "react-icons/ri";
-import "./New.css";
+import "./Homepage.css";
 
-function New() {
+function Homepage() {
     return (
         <div className="homepage">
             <div className="sticky-profile">
@@ -45,4 +45,4 @@ function New() {
     )
 }
 
-export default New;
+export default Homepage;

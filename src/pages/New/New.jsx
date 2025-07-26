@@ -37,7 +37,9 @@ function New() {
                 </div>
             </div>
             <div className="contents-section">
-                <NavBar />
+                <div className='navbar-wrapper'>
+                    <NavBar />
+                </div>
             </div>
         </div>
     )

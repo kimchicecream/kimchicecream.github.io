@@ -23,6 +23,14 @@ function About() {
                         My name is Alex! I'm software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> for the hot and dry Arizona desert. I specialize in <span>full-stack web development</span> and intuitive <span>frontend UI/UX design and development</span>.
                     </p>
                 </div>
+                <div className='github-calendar-wrapper'>
+                    <h3 className='title'>Github Contributions</h3>
+                    <GitHubCalendar
+                        username="kimchicecream"
+                        theme={myTheme}
+                        fontSize={16}
+                    />
+                </div>
                 <div className='featured-projects'>
                     <h3 className='title'>Featured projects</h3>
                     <div className='cards-container'>
@@ -42,13 +50,6 @@ function About() {
                             projectName="babbl"
                         /> */}
                     </div>
-                </div>
-                <div className='contributions'>
-                    <GitHubCalendar
-                        username="kimchicecream"
-                        theme={myTheme}
-                        fontSize={16}
-                    />
                 </div>
             </div>
         </>

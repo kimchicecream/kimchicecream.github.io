@@ -1,4 +1,5 @@
 import GitHubCalendar from "react-github-calendar";
+import './GitHubCalendar.css';
 
 const myTheme = {
   light: [

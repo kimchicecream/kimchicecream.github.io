@@ -68,4 +68,5 @@ html, body {
   --primary-darker: rgb(119, 123, 185);
 
   --outline: 1px solid red;
+  --section-divider: 20px;
 }

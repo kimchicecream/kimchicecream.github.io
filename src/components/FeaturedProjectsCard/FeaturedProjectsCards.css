@@ -1,0 +1,58 @@
+.featured-projects-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.featured-projects-card .project-img {
+    position: relative;
+    height: 150px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: var(--default-radius);
+}
+
+.featured-projects-card .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-projects-card .img-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.featured-projects-card .img-overlay .eye-icon {
+    color: white;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.hover-enabled .project-img:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.hover-enabled .project-img:hover .img-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.featured-projects-card .project-name {
+    font-weight: bold;
+    padding-left: 10px;
+    transition: var(--default-transition);
+}
+
+.hover-enabled .project-img:hover ~ .project-name {
+    font-weight: bold;
+    color: var(--primary);
+}

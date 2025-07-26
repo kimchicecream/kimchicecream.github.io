@@ -56,3 +56,9 @@
     font-weight: bold;
     color: var(--primary);
 }
+
+.featured-project-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}

@@ -15,9 +15,21 @@ function About() {
                 <div className='featured-projects'>
                     <h3 className='title'>Featured projects</h3>
                     <div className='cards-container'>
-                        <FeaturedProjectsCard sourceImg="/FeaturedProjectsImages/featured_melodica.png" projectName="Melodica" enableHover={true} />
-                        <FeaturedProjectsCard sourceImg="" projectName="" />
-                        <FeaturedProjectsCard sourceImg="" projectName="" />
+                        <FeaturedProjectsCard
+                            sourceImg="/FeaturedProjectsImages/featured_melodica.png"
+                            projectName="Melodica"
+                            projectLink="https://github.com/kimchicecream/melodica"
+                            enableHover={true}
+                        />
+                        <FeaturedProjectsCard
+                            sourceImg="/FeaturedProjectsImages/featured_inkspectre.png"
+                            projectName="Inkspectre"
+                            enableHover={false}
+                        />
+                        {/* <FeaturedProjectsCard
+                            sourceImg=""
+                            projectName="babbl"
+                        /> */}
                     </div>
                     <button className='more-projects'>See More Projects</button>
                 </div>

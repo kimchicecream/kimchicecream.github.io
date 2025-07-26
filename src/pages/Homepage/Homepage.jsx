@@ -41,7 +41,10 @@ function Homepage() {
                     <NavBar />
                 </div>
                 <div className="contents">
-                    <div className="message">This section is under construction!</div>
+                    <About />
+                    <Resume />
+                    <Projects />
+                    <Blog />
                 </div>
             </div>
         </div>

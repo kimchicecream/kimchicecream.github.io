@@ -29,14 +29,28 @@
 
 .about-container .featured-projects {
     margin-top: var(--section-divider);
-
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    /* background-color: var(--charcoal-gray-2);
     border-radius: var(--default-radius);
-    padding: 15px; */
+
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.about-container .featured-projects::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
 }
 
 .about-container .featured-projects .cards-container {
@@ -46,6 +60,25 @@
 
 .github-calendar-wrapper {
     margin-top: var(--section-divider);
+    border-radius: var(--default-radius);
+
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.github-calendar-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
 }
 
 .github-calendar-wrapper .title {

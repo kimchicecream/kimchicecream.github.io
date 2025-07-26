@@ -3,6 +3,16 @@ import FeaturedProjectsCard from '../../components/FeaturedProjectsCard';
 import GitHubCalendar from 'react-github-calendar';
 import './About.css';
 
+const myTheme = {
+  dark: [
+    "rgb(45 40 73)",
+    "rgb(74 67 126)",
+    "rgb(96 87 167)",
+    "rgb(118 109 210)",
+    "rgb(140 132 255)"
+  ],
+};
+
 function About() {
     return (
         <>
@@ -33,11 +43,13 @@ function About() {
                         /> */}
                     </div>
                 </div>
-                <GitHubCalendar
-                    username="kimchicecream"
-                    colorScheme="dark"
-                    fontSize={16}
-                />
+                <div className='contributions'>
+                    <GitHubCalendar
+                        username="kimchicecream"
+                        theme={myTheme}
+                        fontSize={16}
+                    />
+                </div>
             </div>
         </>
     );

@@ -28,7 +28,7 @@ function About() {
                 <PageTitle pageTitle='About Alex 👨🏻‍💻' />
                 <div className='intro-block'>
                     <p>
-                        My name is Alex! I'm software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack web development</span> and intuitive <span>frontend UI/UX design and development</span>.
+                        My name is Alex! I'm software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack development</span> and intuitive <span>frontend UI/UX design and development</span>.
                     </p>
                 </div>
                 <div className='github-calendar-wrapper'>

@@ -8,6 +8,7 @@ import { LuMapPin, LuMail, LuGithub, LuLinkedin, LuDribbble } from "react-icons/
 import { RiThreadsFill } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import GlassSurface from '../../components/GlassSurface/GlassSurface.jsx';
 import "./Home.css";
 
 function Home() {

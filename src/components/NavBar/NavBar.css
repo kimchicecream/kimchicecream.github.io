@@ -43,3 +43,7 @@
   background-color: var(--primary);
   border-radius: 2px;
 }
+
+.glass-surface-wrapper {
+    margin: 0 20px;
+}

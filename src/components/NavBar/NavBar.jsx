@@ -39,7 +39,7 @@ function NavBar({ activeSection, setActiveSection }) {
     <GlassSurface
         className="glass-surface-wrapper"
         width='100%'
-        backgroundOpacity={0.05}
+        displace={2}
     >
         {buttonElements}
     </GlassSurface>

@@ -162,11 +162,16 @@
     gap: 5px;
 }
 
+.tech-stack .techs {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
 .tech-stack .frontend {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
 
     border-radius: var(--default-radius);
     padding: 15px 15px 30px;
@@ -181,7 +186,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
 
     border-radius: var(--default-radius);
     padding: 15px 15px 30px;
@@ -191,11 +195,23 @@
     box-shadow: var(--shadow-1);
 }
 
-.tech-stack .database {
+.tech-stack .machine-learning {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
+
+    border-radius: var(--default-radius);
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.tech-stack .other-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     border-radius: var(--default-radius);
     padding: 15px 15px 30px;
@@ -229,7 +245,19 @@
     z-index: -1;
 }
 
-.database::before {
+.machine-learning::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.other-tech::before {
     content: "";
     position: absolute;
     inset: 0;

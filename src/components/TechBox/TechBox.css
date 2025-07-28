@@ -1,5 +1,6 @@
 .techbox-container {
     display: inline-flex;
+    align-items: center;
     gap: 8px;
 }
 
@@ -19,11 +20,23 @@
     background-color: var(--charcoal-gray);
     border: 0.5px solid var(--lighter-jet);
 
-    padding: 3px 6px;
+    padding: 6px;
 }
 
 .techbox-container .tech-logo {
-    width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.techbox-container .tech-logo img {
+    width: 16px;
+    height: 16px;
 }
 
 .techbox-container .tech-name {

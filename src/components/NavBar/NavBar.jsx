@@ -5,7 +5,7 @@ import "./NavBar.css";
 function NavBar({ activeSection, setActiveSection }) {
   const buttons = [
     { id: "about", label: "About Me" },
-    { id: "resume", label: "Resume" },
+    // { id: "resume", label: "Resume" },
     { id: "projects", label: "Projects" },
     { id: "blog", label: "Blog" },
   ];

@@ -58,6 +58,7 @@
     justify-content: space-around;
 }
 
+/* GITHUB CALENDAR */
 .github-calendar-wrapper {
     margin-top: var(--section-divider);
     border-radius: var(--default-radius);
@@ -110,4 +111,15 @@
     font-family: 'Poppins', sans-serif !important;
     font-size: 14px !important;
     fill: #ccc !important;
+}
+
+
+
+
+.about-container .more-about {
+    margin-top: var(--section-divider);
+}
+
+.more-about .writings {
+
 }

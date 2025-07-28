@@ -59,6 +59,20 @@ function About() {
                         /> */}
                     </div>
                 </div>
+                <div className='more-about'>
+                    <div className='writings'></div>
+                    <div className='tech-stack'>
+                        <div className='frontend'>
+
+                        </div>
+                        <div className='backend'>
+
+                        </div>
+                        <div className='database'>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );

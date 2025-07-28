@@ -1,7 +1,9 @@
 import PageTitle from '../../components/PageTitle';
 import FeaturedProjectsCard from '../../components/FeaturedProjectsCard';
 import GitHubCalendar from 'react-github-calendar';
-import { LuGithub } from "react-icons/lu";
+import TechBox from '../../components/TechBox/TechBox';
+import StackIcon from "tech-stack-icons";
+import { PiLightningBold } from "react-icons/pi";
 import './About.css';
 
 const myTheme = {
@@ -63,12 +65,21 @@ function About() {
                     <div className='writings'></div>
                     <div className='tech-stack'>
                         <div className='frontend'>
-
+                            <div className='title'>
+                                <PiLightningBold /> <span>Frontend</span>
+                            </div>
+                            <TechBox techLink='https://www.javascript.com/' techLogo={<StackIcon name="js" />} techName='JavaScript' />
                         </div>
                         <div className='backend'>
+                            <div className='title'>
+                                <PiLightningBold /> <span>Backend</span>
+                            </div>
 
                         </div>
                         <div className='database'>
+                            <div className='title'>
+                                <PiLightningBold /> <span>Database</span>
+                            </div>
 
                         </div>
                     </div>

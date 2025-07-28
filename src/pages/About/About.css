@@ -118,8 +118,125 @@
 
 .about-container .more-about {
     margin-top: var(--section-divider);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .more-about .writings {
+    flex: 2;
+    align-self: flex-start;
 
+    border-radius: var(--default-radius);
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.writings::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.more-about .tech-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.more-about .tech-stack .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.tech-stack .frontend {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    border-radius: var(--default-radius);
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+    flex-wrap: wrap;
+}
+
+.tech-stack .backend {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    border-radius: var(--default-radius);
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.tech-stack .database {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    border-radius: var(--default-radius);
+    padding: 15px 15px 30px;
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.frontend::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.backend::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.database::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
 }

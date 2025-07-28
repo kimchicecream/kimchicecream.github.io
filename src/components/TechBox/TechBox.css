@@ -1,0 +1,32 @@
+.techbox-container {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.techbox-container:hover {
+    cursor: pointer;
+}
+
+.techbox-container a {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 5px;
+
+    background-color: var(--charcoal-gray);
+    border: 0.5px solid var(--lighter-jet);
+
+    padding: 3px 6px;
+}
+
+.techbox-container .tech-logo {
+    width: 15px;
+}
+
+.techbox-container .tech-name {
+    font-size: 11px;
+    line-height: 1;
+}

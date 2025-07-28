@@ -18,9 +18,15 @@
     gap: 5px;
 
     background-color: var(--charcoal-gray);
-    border: 0.5px solid var(--lighter-jet);
+    border: 0.5px solid hsl(0, 0%, 34%);
 
     padding: 6px;
+
+    transition: var(--default-transition);
+}
+
+.techbox-container a:hover {
+    border: 0.5px solid var(--primary);
 }
 
 .techbox-container .tech-logo {

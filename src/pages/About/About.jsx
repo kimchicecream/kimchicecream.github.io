@@ -30,7 +30,7 @@ function About() {
                 <PageTitle pageTitle='About Alex 👨🏻‍💻' />
                 <div className='intro-block'>
                     <p>
-                        My name is Alex! I'm software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack development</span> and intuitive <span>frontend UI/UX design and development</span>.
+                        My name is Alex! I'm a software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack development</span> and intuitive <span>frontend UI/UX design and development</span>.
                     </p>
                 </div>
                 <div className='github-calendar-wrapper'>
@@ -74,6 +74,7 @@ function About() {
                                 <TechBox techLink='https://redux.js.org/' techLogo={<StackIcon name="redux" />} techName='Redux' />
                                 <TechBox techLink='https://vite.dev/' techLogo={<StackIcon name="vitejs" />} techName='Vite' />
                                 <TechBox techLink='https://html.com' techLogo={<StackIcon name="html5" />} techName='HTML5' />
+                                <TechBox techLink='https://www.electronjs.org/' techLogo={<StackIcon name="electron" />} techName='Electron' />
                                 <TechBox techLink='https://www.w3schools.com/css/' techLogo={<StackIcon name="css3" />} techName='CSS3' />
                                 <TechBox techLink='https://tailwindcss.com/' techLogo={<StackIcon name="tailwindcss" />} techName='Tailwind CSS' />
                                 <TechBox techLink='https://www.selenium.dev/' techLogo={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#CF0A2C" d="M83.1 80.5c-4.7-.1-8.8 3.4-9.3 8.1 0 .2.1.3.3.3h18c.2 0 .3-.1.3-.3-.4-4.8-4.5-8.4-9.3-8.1z"/><path fill="#CF0A2C" d="M121.7 19.9l-38.4 43c-.4.5-1.2.5-1.7.1l-.1-.1-19.4-20.1c-.4-.4-.4-1-.1-1.5l6.5-8.3c.4-.5 1.1-.7 1.6-.3.1.1.2.1.2.2l11 12.1c.4.5 1.2.5 1.7.1l.1-.1 30.7-41.7c.3-.4.2-.9-.2-1.2-.1-.1-.3-.1-.5-.2H5.7c-.5.1-.9.5-.9 1v122.2c0 .5.4.9.9.9h116.6c.5 0 .9-.4.9-.9V20.5c0-.5-.4-.8-.8-.8-.3-.1-.5 0-.7.2zm-83.8 92.5c-7.7.3-15.2-2.3-20.9-7.4-.4-.4-.5-1-.1-1.5l4.5-6.4c.4-.5 1.1-.6 1.6-.3l.1.1c4.2 3.9 9.6 6 15.3 6 6 0 8.9-2.8 8.9-5.7 0-9.1-29.5-2.8-29.5-22.1 0-8.5 7.4-15.6 19.4-15.6 6.9-.2 13.7 2.1 19.1 6.5.4.4.5 1.1.1 1.5l-4.7 6.2c-.4.5-1.1.6-1.6.2-4-3.2-8.9-4.9-14-4.8-4.7 0-7.3 2.1-7.3 5.1 0 8.1 29.4 2.7 29.4 21.8.1 9.3-6.6 16.4-20.3 16.4zm64.3-17.8c0 .6-.5 1-1 1H74.3c-.2 0-.3.1-.3.3.9 5.2 5.6 8.8 10.9 8.5 3.4-.1 6.6-1.1 9.3-3.1.4-.3 1.1-.3 1.4.2l.1.1 3.3 4.8c.3.4.2 1-.2 1.4-4.3 3.2-9.6 4.8-14.9 4.6-11.6 0-20.3-7.8-20.3-20-.3-10.7 8.1-19.6 18.8-19.9h.9c11.3 0 19.1 8.5 19.1 20.9l-.2 1.2z"/></svg>
@@ -100,7 +101,7 @@ function About() {
                         </div>
                         <div className='machine-learning'>
                             <div className='title'>
-                                <PiLightningBold /> <span>Machine Learning</span>
+                                <PiLightningBold /> <span>AI & Machine Learning</span>
                             </div>
                             <div className='techs'>
                                 <TechBox techLink='https://pytorch.org/' techLogo={<StackIcon name="pytorch" />} techName='PyTorch' />
@@ -116,7 +117,6 @@ function About() {
                                 <PiLightningBold /> <span>Other</span>
                             </div>
                             <div className='techs'>
-                                <TechBox techLink='https://www.electronjs.org/' techLogo={<StackIcon name="electron" />} techName='Electron' />
                                 <TechBox techLink='https://www.adobe.com/products/photoshop.html' techLogo={<StackIcon name="ps" />} techName='Adobe Photoshop' />
                                 <TechBox techLink='https://www.blender.org/' techLogo={<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><path d="M66.332 70.032c.24-4.242 2.327-7.987 5.485-10.634 3.094-2.602 7.248-4.193 11.809-4.193 4.537 0 8.69 1.59 11.78 4.193 3.163 2.647 5.237 6.392 5.485 10.634.24 4.35-1.523 8.41-4.605 11.417-3.158 3.05-7.627 4.977-12.66 4.977-5.037 0-9.526-1.915-12.664-4.977-3.094-3.006-4.853-7.044-4.606-11.397zm0 0" fill="#235785"/><path d="M39.245 79.002c.028 1.66.564 4.89 1.36 7.404 1.682 5.336 4.537 10.273 8.49 14.599 4.062 4.465 9.074 8.055 14.85 10.61 6.073 2.67 12.665 4.037 19.505 4.037 6.84-.009 13.432-1.4 19.504-4.102 5.776-2.582 10.79-6.168 14.85-10.657 3.974-4.374 6.82-9.307 8.491-14.647a37 37 0 001.595-8.163c.208-2.69.12-5.405-.263-8.12a37.535 37.535 0 00-5.417-14.714c-2.574-4.15-5.916-7.76-9.89-10.813l.012-.004-39.955-30.506c-.036-.028-.068-.056-.104-.08-2.619-2.002-7.044-1.994-9.91.008-2.914 2.031-3.25 5.385-.656 7.496l-.012.008 16.682 13.484-50.789.051h-.068c-4.197.004-8.239 2.739-9.03 6.213-.82 3.521 2.035 6.46 6.412 6.46l-.008.016 25.736-.048L4.58 82.524c-.056.044-.12.088-.176.132C.069 85.95-1.33 91.446 1.4 94.9c2.778 3.522 8.666 3.546 13.047.02L39.505 74.51s-.368 2.758-.336 4.397zm64.56 9.219c-5.168 5.228-12.416 8.21-20.227 8.21-7.831.012-15.079-2.918-20.248-8.142-2.526-2.559-4.377-5.473-5.528-8.591a22.202 22.202 0 01-1.271-9.602 22.446 22.446 0 012.778-9.039c1.507-2.714 3.59-5.18 6.14-7.267 5.033-4.058 11.42-6.28 18.1-6.28 6.709-.008 13.097 2.174 18.13 6.236 2.55 2.075 4.625 4.529 6.14 7.243a22.302 22.302 0 012.774 9.043 22.313 22.313 0 01-1.271 9.598c-1.147 3.142-3.002 6.056-5.533 8.615zm0 0" fill="#e87500"/></svg>
 } techName='Blender' />

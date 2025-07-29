@@ -62,7 +62,7 @@ function About() {
                     </div>
                 </div>
                 <div className='more-about'>
-                    <div className='writings'></div>
+                    {/* <div className='writings'></div> */}
                     <div className='tech-stack'>
                         <div className='frontend'>
                             <div className='title'>

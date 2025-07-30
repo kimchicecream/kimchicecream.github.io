@@ -28,6 +28,7 @@ function About() {
         <>
             <div className='about-container'>
                 <PageTitle pageTitle='About Alex 👨🏻‍💻' />
+                <span id='marker'></span>
                 <div className='intro-block'>
                     <p>
                         My name is Alex! I'm a software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack development</span> and intuitive <span>frontend UI/UX design and development</span>.

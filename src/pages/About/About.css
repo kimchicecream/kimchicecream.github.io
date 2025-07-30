@@ -7,6 +7,13 @@
     padding: 30px;
 }
 
+.about-container #marker {
+    height: 5px;
+    background-color: var(--primary);
+    width: 70px;
+    border-radius: 10px;
+}
+
 .intro-block p {
     line-height: 1.6em;
 }

@@ -71,7 +71,7 @@ function About() {
                             </div>
                             <div className='techs'>
                                 <TechBox techLink='https://www.javascript.com/' techLogo={<StackIcon name="js" />} techName='JavaScript' />
-                                <TechBox techLink='https://www.javascript.com/' techLogo={<StackIcon name="react" />} techName='React' />
+                                <TechBox techLink='https://react.dev/' techLogo={<StackIcon name="react" />} techName='React' />
                                 <TechBox techLink='https://redux.js.org/' techLogo={<StackIcon name="redux" />} techName='Redux' />
                                 <TechBox techLink='https://vite.dev/' techLogo={<StackIcon name="vitejs" />} techName='Vite' />
                                 <TechBox techLink='https://html.com' techLogo={<StackIcon name="html5" />} techName='HTML5' />
@@ -98,6 +98,8 @@ function About() {
                                 <TechBox techLink='https://nodejs.org/en' techLogo={<StackIcon name="nodejs" />} techName='Node.js' />
                                 <TechBox techLink='https://go.dev/' techLogo={<StackIcon name="go" />} techName='Go' />
                                 <TechBox techLink='https://www.docker.com/' techLogo={<StackIcon name="docker" />} techName='Docker' />
+                                <TechBox techLink='https://www.postgresql.org/' techLogo={<StackIcon name="postgresql" />} techName='PostgreSQL' />
+                                <TechBox techLink='https://flask.palletsprojects.com/en/stable/' techLogo={<StackIcon name="flask" />} techName='Flask' />
                             </div>
                         </div>
                         <div className='machine-learning'>

@@ -1,0 +1,15 @@
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    padding: 30px;
+}
+
+.blog-container #marker {
+    height: 5px;
+    background-color: var(--primary);
+    width: 70px;
+    border-radius: 10px;
+}

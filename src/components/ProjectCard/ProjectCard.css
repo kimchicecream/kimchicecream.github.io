@@ -4,8 +4,23 @@
 
     width: 400px;
 
-    background-color: var(--charcoal-gray);
     border-radius: var(--default-radius);
+    position: relative;
+    background-color: var(--bg-gradient);
+    z-index: 0;
+    box-shadow: var(--shadow-1);
+}
+
+.project-card-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--border-gradient-onyx);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
 }
 
 .project-card-container .project-img {

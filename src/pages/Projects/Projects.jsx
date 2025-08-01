@@ -13,7 +13,7 @@ function Projects() {
                 <div className='projects-content'>
                     <div className='filter'></div>
                     <div className='projects-display'>
-                        <ProjectCard imageSrc="/FeaturedProjectsImages/featured_melodica.png" timeframe="September 2024 - December 2025" title="Melodica" category="Web"
+                        <ProjectCard imageSrc="/FeaturedProjectsImages/featured_melodica.png" timeframe="April 2024 - Current" title="Melodica" category="Web"
                             tech={
                                 <>
                                     <TechBox techLink='https://www.javascript.com/' techLogo={<StackIcon name="js" />} techName='JavaScript' />
@@ -22,6 +22,12 @@ function Projects() {
                                     <TechBox techLink='https://vite.dev/' techLogo={<StackIcon name="vitejs" />} techName='Vite' />
                                     <TechBox techLink='https://www.postgresql.org/' techLogo={<StackIcon name="postgresql" />} techName='PostgreSQL' />
                                     <TechBox techLink='https://flask.palletsprojects.com/en/stable/' techLogo={<StackIcon name="flask" />} techName='Flask' />
+                                </>
+                            }
+                        />
+                        <ProjectCard imageSrc="/FeaturedProjectsImages/featured_inkspectre.png" timeframe="May 2025 - Current" title="Inkspectre" category="App"
+                            tech={
+                                <>
                                 </>
                             }
                         />

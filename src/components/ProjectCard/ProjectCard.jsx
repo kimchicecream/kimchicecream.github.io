@@ -4,7 +4,7 @@ function ProjectCard({ imageSrc, timeframe, title, category, tech }) {
     return (
         <>
             <div className='project-card-container'>
-                <div className='img'>{imageSrc}</div>
+                <div className='project-img'>{imageSrc}</div>
                 <div className='desc'>
                     <span id='timeframe'>{timeframe}</span>
                     <div className='title-category'>

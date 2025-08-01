@@ -3,13 +3,53 @@
     flex-direction: column;
 
     width: 400px;
+
+    background-color: var(--charcoal-gray);
+    border-radius: var(--default-radius);
 }
 
 .project-card-container .project-img {
     background-color: aliceblue;
     width: 400px;
-    height: 200px;
+    height: 250px;
+    border-radius: var(--default-radius);
+    overflow: hidden;
 }
 
 .project-card-container .project-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.project-card-container .desc {
+    padding: 10px 20px 20px;
+}
+
+.desc #timeframe {
+    font-size: 14px;
+    color: var(--lighter-jet);
+}
+
+.desc .timeframe-category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeframe-category #category {
+    font-size: 14px;
+}
+
+.desc #title {
+    margin: 10px 0;
+}
+
+.desc .project-techs {
+    margin-top: 40px;
+    display: flex;
+    gap: 5px;
+
+    flex-wrap: wrap;
 }

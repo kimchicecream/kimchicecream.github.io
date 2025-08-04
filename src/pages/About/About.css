@@ -275,3 +275,12 @@
     mask-composite: exclude;
     z-index: -1;
 }
+
+/*
+.intro-block,
+.github-calendar-wrapper,
+.featured-projects .cards-container > *,
+.tech-stack .frontend,
+.tech-stack .backend {
+    opacity: 0;
+} */

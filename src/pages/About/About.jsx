@@ -30,46 +30,46 @@ const myTheme = {
 
 function About() {
     useEffect(() => {
-        Refresh fade-in on page load
-        gsap.from(".intro-block", {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            ease: "power3.out"
-        });
+        // Refresh fade-in on page load
+        // gsap.from(".intro-block", {
+        //     opacity: 0,
+        //     y: 50,
+        //     duration: 1,
+        //     ease: "power3.out"
+        // });
 
-        // Scroll-triggered animations for sections
-        gsap.from(".github-calendar-wrapper", {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: ".github-calendar-wrapper",
-                start: "top 80%", // Trigger point
-            }
-        });
+        // // Scroll-triggered animations for sections
+        // gsap.from(".github-calendar-wrapper", {
+        //     opacity: 0,
+        //     y: 50,
+        //     duration: 1,
+        //     scrollTrigger: {
+        //         trigger: ".github-calendar-wrapper",
+        //         start: "top 80%", // Trigger point
+        //     }
+        // });
 
-        gsap.from(".featured-projects .cards-container > *", {
-            opacity: 0,
-            y: 50,
-            duration: 0.8,
-            stagger: 0.2, // Stagger between elements
-            scrollTrigger: {
-                trigger: ".featured-projects",
-                start: "top 80%",
-            }
-        });
+        // gsap.from(".featured-projects .cards-container > *", {
+        //     opacity: 0,
+        //     y: 50,
+        //     duration: 0.8,
+        //     stagger: 0.2, // Stagger between elements
+        //     scrollTrigger: {
+        //         trigger: ".featured-projects",
+        //         start: "top 80%",
+        //     }
+        // });
 
-        gsap.from(".tech-stack .frontend, .tech-stack .backend", {
-            opacity: 0,
-            x: -50, // Slide from left
-            duration: 0.8,
-            stagger: 0.3,
-            scrollTrigger: {
-                trigger: ".tech-stack",
-                start: "top 85%",
-            }
-        });
+        // gsap.from(".tech-stack .frontend, .tech-stack .backend", {
+        //     opacity: 0,
+        //     x: -50, // Slide from left
+        //     duration: 0.8,
+        //     stagger: 0.3,
+        //     scrollTrigger: {
+        //         trigger: ".tech-stack",
+        //         start: "top 85%",
+        //     }
+        // });
     }, []);
 
     return (

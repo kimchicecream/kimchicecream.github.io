@@ -284,3 +284,9 @@
 .tech-stack .backend {
     opacity: 0;
 } */
+
+.intro-block,
+.cards-container > *,
+.tech-stack {
+  opacity: 0;
+}

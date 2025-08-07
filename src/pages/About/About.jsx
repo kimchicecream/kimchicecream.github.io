@@ -8,7 +8,9 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import './About.css';
 
-// gsap.registerPlugin(ScrollTrigger)
+import { ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const myTheme = {
     light: [
@@ -36,25 +38,34 @@ function About() {
 
         gsap.fromTo('.github-calendar-wrapper',
             { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, delay: 0.2 }
+            { opacity: 1, y: 0, delay: 0.2,
+                scrollTrigger: {
+                    trigger: '.featured-projects',
+                    start: 'top 100%'
+                }
+            }
         );
 
         gsap.fromTo('.featured-projects',
             { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, delay: 0.4 }
-        );
-
-        gsap.fromTo('.tech-stack',
-            { opacity: 0, x: -40 },
-            {
-                opacity: 1,
-                x: 0,
-                duration: 1.2,
-                ease: 'power2.out',
-                delay: 0.6
+            { opacity: 1, y: 0, delay: 0.4,
+                scrollTrigger: {
+                    trigger: '.featured-projects',
+                    start: 'top 100%'
+                }
             }
         );
-        }, []);
+
+        gsap.fromTo('.tech-stack > *',
+            { opacity: 0, x: -40 },
+            { opacity: 1, x: 0, stagger: 0.2, delay: 0.4,
+                scrollTrigger: {
+                    trigger: '.tech-stack',
+                    start: 'top 100%'
+                }
+            }
+        );
+    }, []);
 
     return (
         <>
@@ -63,7 +74,7 @@ function About() {
                 <span id='marker'></span>
                 <div className='intro-block'>
                     <p>
-                        My name is Alex! I'm a software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack development</span> and intuitive <span>frontend UI/UX design and development</span>.
+                        Hi, I'm Alex! I'm a software engineer who traded the beaches of <a href='https://share.google/9YXKtvvto4HpgwHYD' target="_blank" rel="noreferrer">Guam</a> 🇬🇺 for the hot and dry Arizona desert. I specialize in <span>full-stack development</span> and intuitive <span>frontend UI/UX design and development</span>.
                     </p>
                 </div>
                 <div className='github-calendar-wrapper'>

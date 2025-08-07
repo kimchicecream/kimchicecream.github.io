@@ -33,12 +33,12 @@ function About() {
     useEffect(() => {
         gsap.fromTo('.intro-block',
             { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, }
+            { opacity: 1, y: 0, delay: 0.2 }
         );
 
         gsap.fromTo('.github-calendar-wrapper',
             { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, delay: 0.2,
+            { opacity: 1, y: 0, delay: 0.3,
                 scrollTrigger: {
                     trigger: '.featured-projects',
                     start: 'top 100%'
@@ -57,8 +57,8 @@ function About() {
         );
 
         gsap.fromTo('.tech-stack > *',
-            { opacity: 0, x: -40 },
-            { opacity: 1, x: 0, stagger: 0.2, delay: 0.4,
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, stagger: 0.2, delay: 0.5,
                 scrollTrigger: {
                     trigger: '.tech-stack',
                     start: 'top 100%'

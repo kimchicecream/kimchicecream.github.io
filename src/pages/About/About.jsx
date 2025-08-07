@@ -8,6 +8,8 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import './About.css';
 
+// gsap.registerPlugin(ScrollTrigger)
+
 const myTheme = {
     light: [
         "rgb(45 40 73)",
@@ -27,37 +29,32 @@ const myTheme = {
 
 function About() {
     useEffect(() => {
-    gsap.fromTo(
-        '.intro-block',
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }
-    );
+        gsap.fromTo('.intro-block',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, }
+        );
 
-    gsap.fromTo(
-        '.cards-container > *',
-        { opacity: 0, y: 40 },
-        {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: 'power2.out',
-        stagger: 0.2,
-        delay: 0.4
-        }
-    );
+        gsap.fromTo('.github-calendar-wrapper',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, delay: 0.2 }
+        );
 
-    gsap.fromTo(
-        '.tech-stack',
-        { opacity: 0, x: -40 },
-        {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: 'power2.out',
-        delay: 1
-        }
-    );
-    }, []);
+        gsap.fromTo('.featured-projects',
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, delay: 0.4 }
+        );
+
+        gsap.fromTo('.tech-stack',
+            { opacity: 0, x: -40 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1.2,
+                ease: 'power2.out',
+                delay: 0.6
+            }
+        );
+        }, []);
 
     return (
         <>

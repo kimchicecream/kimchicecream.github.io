@@ -5,10 +5,10 @@ import TechBox from '../../components/TechBox/TechBox';
 import StackIcon from "tech-stack-icons";
 import { PiLightningBold } from "react-icons/pi";
 import { useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
 import './About.css';
 
-import { ScrollTrigger } from 'gsap/all';
 
 gsap.registerPlugin(ScrollTrigger);
 

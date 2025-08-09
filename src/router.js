@@ -3,6 +3,7 @@ import Home from './pages/Home/index.js';
 import Resume from './pages/Resume/index.js';
 import Projects from './pages/Projects/index.js';
 import Blog from './pages/Blog/index.js';
+import ProjectPage from './pages/ProjectPage/index.js';
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         {
           path: "/projects",
           element: <Projects />,
+        },
+        {
+          path: "/projects/:slug",
+          element: <ProjectPage />
         },
         {
           path: "/blog",

@@ -13,7 +13,7 @@ function Projects() {
                 <div className='projects-content'>
                     <div className='filter'></div>
                     <div className='projects-display'>
-                        <ProjectCard imageSrc="/FeaturedProjectsImages/featured_melodica.png" timeframe="April 2024 - Current" title="Melodica" category="Web"
+                        <ProjectCard imageSrc="/FeaturedProjectsImages/featured_melodica.png" timeframe="April 2024 - Current" title="Melodica" category="Web" to="/projects/melodica"
                             tech={
                                 <>
                                     <TechBox techLink='https://www.javascript.com/' techLogo={<StackIcon name="js" />} techName='JavaScript' />

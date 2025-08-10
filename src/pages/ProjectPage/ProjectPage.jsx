@@ -4,36 +4,26 @@ import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-export default function ProjectPage() {
-  const { slug } = useParams();
+export default function ProjectPage({ slug: slugProp }) {
+  const params = useParams?.() || {};
+  const slug = slugProp ?? params.slug; // prefer prop, fallback to route param
+
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
+    if (!slug) return;
     let alive = true;
-
-    async function load() {
+    (async () => {
       try {
-        // PUBLIC_URL handles GH Pages subpaths if you ever use them
-        const base = process.env.PUBLIC_URL || "";
-        const res = await fetch(`${base}/content/projects/${slug}.md`, {
-          cache: "no-store",
-        });
-        if (!res.ok) throw new Error(`Not found: ${slug}.md`);
+        const res = await fetch(`/projects/${slug}.md`, { cache: "no-store" });
+        if (!res.ok) throw new Error("not-found");
         const text = await res.text();
-        if (alive) {
-          setContent(text);
-          setError("");
-        }
-      } catch (e) {
-        if (alive) {
-          setContent("");
-          setError("not-found");
-        }
+        if (alive) { setContent(text); setError(""); }
+      } catch {
+        if (alive) { setError("not-found"); setContent(""); }
       }
-    }
-
-    load();
+    })();
     return () => { alive = false; };
   }, [slug]);
 
@@ -41,7 +31,6 @@ export default function ProjectPage() {
     return (
       <div className="project-not-found">
         <h1>Project not found</h1>
-        <p>We couldn’t find “{slug}”.</p>
         <Link to="/projects">← Back to Projects</Link>
       </div>
     );
@@ -51,9 +40,7 @@ export default function ProjectPage() {
 
   return (
     <article className="project-article">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {content}
-      </ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     </article>
   );
 }

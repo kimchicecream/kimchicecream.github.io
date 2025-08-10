@@ -9,7 +9,6 @@ import { RiThreadsFill } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import GA4Listener from '../../components/GA4Listener';
-import { Outlet } from 'react-router-dom';
 // import GlassSurface from '../../components/GlassSurface/GlassSurface.jsx';
 import "./Home.css";
 
@@ -81,7 +80,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <Outlet />
         </>
     )
 }

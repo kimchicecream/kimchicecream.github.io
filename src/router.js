@@ -7,6 +7,7 @@ import ProjectPage from './pages/ProjectPage/index.js';
 
 const router = createBrowserRouter([
     {
+
       path: "/",
       element: <Home />,
       children: [

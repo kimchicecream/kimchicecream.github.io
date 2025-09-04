@@ -6,7 +6,6 @@ import Blog from './pages/Blog/index.js';
 import ProjectPage from './pages/ProjectPage/index.js';
 
 const router = createBrowserRouter([
-
     {
       path: "/",
       element: <Home />,
